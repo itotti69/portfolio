@@ -1,0 +1,21 @@
+/*ページ全体に関わるCSSの初期設定は基本ここに書く*/
+/*全称セレクタの設定*/
+* {
+    margin: 0;
+    padding: 0;
+    max-width:  100%;
+}
+
+a {	
+    /*aタグの見た目を整える*/
+    text-decoration: none;
+    color: white;
+ }
+
+ #background-1 {
+    background-image: url("../img/aurora_2.jpg");
+}
+
+#background-2 {
+    background-image: url("../img/office.jpg");
+}

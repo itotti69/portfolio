@@ -1,0 +1,90 @@
+
+.header-main {
+    display: flex;
+    height: 55px;
+    padding: 0px 66px;
+    align-items: center;
+    color:aquamarine;
+    background-color: transparent;
+}
+
+.header-main h1 {
+    padding-top: 50px;
+}
+
+.header-main .nav-menu-top {
+    margin-left: auto;
+}
+
+.header-main ul {
+    list-style: none;
+    /*リストを横並びに配置する*/
+    display: flex;
+}
+
+.header-main ul li {
+    margin: 0 0 0 17px;
+    font-size: 20px;
+}
+
+.header-sub {
+    display: flex;
+    height: 55px;
+    padding: 0px 66px;
+    align-items: right;
+    color: white;
+    background-color: transparent;
+}
+
+.header-sub .nav-menu-under {
+    /*タイトル以外のナビゲーション項目は全て右寄せに*/
+    margin-left: auto;
+}
+
+.header-sub ul {
+    list-style: none;
+    display: flex;
+}
+
+.header-sub ul li {
+    margin: 0 0 0 17px;
+    font-size: 12px;
+}
+
+.top {
+    color: white;
+    height: 700px;
+    text-align: center;
+    /*背景画像の設定*/
+    background-size: cover;
+    /*背景画像は固定に*/
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.top h2 {
+    padding-top: 200px;
+}
+
+.content-1 {
+    height: 600px;
+    background-color: rgb(215, 235, 184);
+}
+
+#introduction {
+    padding: 200px;
+    background-color: rgb(221, 215, 215);
+}
+
+#introduction h1 {
+    font-size: 40px;
+}
+
+.career {
+    padding-top: 20px;
+}
+
+.vision {
+    padding: 200px;
+    text-align: center;
+}
