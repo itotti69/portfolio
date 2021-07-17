@@ -7,6 +7,8 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/option.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 </head>
 <body>
     <header class="header-main" id="background-1">
@@ -82,14 +84,32 @@
 
     <section class="vision" id="background-2">
         <!--ここにメッセージを追加する（未来のビジョンなど）-->
-        <h2>この先も進化を続けていく社会の中で、その時々にあったWebデザインのあり⽅を 
-            追求し、<br> 誰にでもわかりやすいWebサイトを制作していきたいと考えています。</h2>
+        <h2>この先も進化を続けていく社会の中で、その時々にあったWebデザインのあり⽅を追求し、
+             誰にでもわかりやすいWebサイトを制作していきたいと考えています。</h2>
     </section>
 
 
     <section id="design">
         <!--ここにはギャラリーでこれまで作った「デザイン」を載せる-->
         <h1>Section１　〜デザイン〜</h1>
+
+        <div class="design-images">
+            <div class="design-content" id="post1-1"> 
+              <a data-fancybox="gallery01" href="img/movie_0.jpg" data-caption="オープニング" >
+                <img src="img/movie_0.jpg" alt="design image">
+              </a>
+            </div>
+            <div class="design-content" id="post1-2"> 
+              <a data-fancybox="gallery01" href="img/movie_1.jpg" data-caption="「光と闇が待っているの」">
+                <img src="img/movie_1.jpg" alt="design image">
+              </a>
+            </div>
+            <div class="design-content" id="post1-3"> 
+              <a data-fancybox="gallery01" href="img/movie_2.jpg" data-caption="「僕らにはいつまでも" >
+                <img src="img/movie_2.jpg" alt="design image">
+              </a>
+            </div>
+          </div>
 
     </section>
 
@@ -98,6 +118,24 @@
         <!--ここにはギャラリーでこれまでに作った動画・アニメーション３DCGを載せる-->
         <h1>Section２　〜動画・アニメーション・３DCG〜</h1>
 
+        <div class="movie-images">
+            <div class="movie-content" id="post2-1"> 
+              <a data-fancybox="gallery02" href="img/movie_0.jpg" data-caption="オープニング" >
+                <img src="img/movie_0.jpg" alt="movie image">
+              </a>
+            </div>
+            <div class="movie-content" id="post2-2"> 
+              <a data-fancybox="gallery02" href="img/movie_1.jpg" data-caption="「光と闇が待っているの」">
+                <img src="img/movie_1.jpg" alt="movie image">
+              </a>
+            </div>
+            <div class="movie-content" id="post2-3"> 
+              <a data-fancybox="gallery02" href="img/movie_2.jpg" data-caption="「僕らにはいつまでも" >
+                <img src="img/movie_2.jpg" alt="movie image">
+              </a>
+            </div>
+          </div>
+
     </section>
 
 
@@ -105,7 +143,25 @@
         <!--ここにはこれまでに作ったWebサイトのデザインを載せる-->
         <h1>Section３　〜Webサイト〜</h1>
 
+        <div class="website-images">
+            <div class="web-content" id="post3-1"> 
+              <a data-fancybox="gallery03" href="img/movie_0.jpg" data-caption="オープニング" >
+                <img src="../image/img3.jpg" alt="movie image">
+              </a>
+            </div>
+            <div class="web-content" id="post3-2"> 
+              <a data-fancybox="gallery03" href="img/movie_1.jpg" data-caption="「光と闇が待っているの」">
+                <img src="../image/img4.jpg" alt="movie image">
+              </a>
+            </div>
+            <div class="web-content" id="post3-3"> 
+              <a data-fancybox="gallery03" href="img/movie_2.jpg" data-caption="「僕らにはいつまでも" >
+                <img src="../image/img5.jpg" alt="movie image">
+              </a>
+            </div>
+          </div>
+
     </section>
-    
+    <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 </body>
 </html>
