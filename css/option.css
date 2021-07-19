@@ -19,3 +19,15 @@ a {
 #background-2 {
     background-image: url("../img/office.jpg");
 }
+
+
+.linkbutton{
+    padding: 30px 100px;
+    max-width: 70vh;
+    color: white;
+    background-color: black;
+}
+
+.linkbutton:hover {
+    background-color: blue;
+}

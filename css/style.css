@@ -68,7 +68,7 @@
 
 .content-1 {
     height: 60vh;
-    background-color: rgb(215, 235, 184);
+    background-color: white;
 }
 
 #introduction {
@@ -87,8 +87,7 @@
 .vision {
     /*画面サイズが狭ければ、背景の写真にあるホワイトボードの中に
     文字が収まるようにpaddingを調整してみた*/
-    padding: 440px 390px 770px 350px;
-
+    padding: 440px 70vh 68vh;
     text-align: center;
     /*背景画像の設定*/
     background-size: cover;
@@ -96,10 +95,20 @@
     background-position: center;
 }
 
+.vision h2 {
+        max-width: 60vh;
+}
+
 #design {
     height: 200vh;
-    background-color: rgb(255, 246, 249);
+    border: 10px solid rgb(253, 188, 210);
     display: flex;
+}
+
+#design-title {
+    max-width: 90vh;
+    padding: 0 70px;
+    background-color: rgb(250, 220, 230);
 }
 
 #design h1 {
@@ -111,17 +120,26 @@
 
 #design h2 {
     font-size: 3em;
-    padding-left: 130px;
+    padding: 10px 33px;
 }
 
 #movie-creation {
     max-height: 600vh;
-    background-color: rgb(176, 218, 247);
+    /*background-color: rgb(176, 218, 247);*/
+    border: 10px solid rgb(176, 218, 247);
+}
+
+#movie-creation-title {
+    padding: 13em;
+    background-color: rgb(203, 231, 252);
 }
 
 #movie-creation h1 {
-    max-width: 40vh;
-    padding: 200px 50px 0px 130px;
+    max-width: 27rem;
+    position: relative;
+    top: 10px;
+    left: 130px;
+    padding: 0 180px 0 180px;
     font-size: 5em;
 }
 
@@ -132,6 +150,12 @@
 
 #website-design {
     height: 220vh;
+    border: 10px solid rgb(195, 248, 232);
+}
+
+#website-design-title {
+    max-width: 30%;
+    padding-bottom: 10vh;
     background-color: rgb(168, 240, 218);
 }
 
@@ -149,7 +173,7 @@
 .design-images {
     display: flex;
     justify-content: center;
-    padding: 200px 0px 0px 0px;
+    padding: 200px 0px 100px 0px;
 }
 
 #post1-2 {
@@ -161,10 +185,11 @@
 }
 
 .design-content{
-    max-width: 50vh;
-    max-height: 100vh;
+    max-width: 40vh;
+    max-height: 90vh;
     float: left;
-    margin: 0 20px 10px 0;
+    margin: 0 20px 10px 50px;
+    position: relative;
 }
 
 .design-content img {
@@ -175,6 +200,12 @@
     vertical-align: middle;
 }
 
+.design-content .linkbutton {
+    position: absolute;
+    bottom: 10vh;
+    left: 10vh;
+}
+
 .movie-images {
     display: flex;
     justify-content: center;
@@ -183,9 +214,10 @@
 
 .movie-content{
     max-width: 100vh;
-    max-height: 100vh;
+    height: 50em;
     float: left;
     margin: 0 40px 10px 0;
+    position: relative;
 }
 
 .movie-content img {
@@ -194,6 +226,12 @@
     max-height: 100%;
     object-fit: cover;
     vertical-align: middle;
+}
+
+.movie-content .linkbutton {
+    position: absolute;
+    top: 50vh;
+    left: 20vh;
 }
 
 .website-images {
@@ -219,6 +257,8 @@
     max-width: 100vh;
     max-height: 100vh;
     margin: 0 40px 120px 0;
+    display: flex;
+    position: relative;
 }
 
 .web-content img {
@@ -227,4 +267,70 @@
     max-height: 100%;
     object-fit: cover;
     vertical-align: middle;
+}
+
+.web-content .linkbutton {
+    width: 26vh;
+}
+
+.web-content .viewmore1 {  
+    position: absolute;
+    top: 30vh;
+    right: 120vh;
+}
+
+.web-content .viewmore2 {
+    position: absolute;
+    top: 40vh;
+    left: 125vh;
+}
+
+.web-content .viewmore3 {
+    position: absolute;
+    top: 45vh;
+    right: 125vh;
+}
+
+footer {
+    width: 100%;
+    height: 250px;
+    padding-top: 6px;
+    margin-top: 140px;
+    background-color: white;
+    text-align: center;
+    color: gray;
+    bottom: 0; /*下に固定*/
+}
+
+
+
+.footer-logo {
+    font-size: 28px;
+    margin: 14px 50px 50px 5px;
+    padding-top: 0;
+}
+
+
+footer ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.link-message {
+    font-size: 30px;
+    margin: 0 5px 0 5px;
+    padding-top: 0;
+}
+
+i {
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.copyright {
+    margin: 0;
+    padding: 70px 0 0 0;
 }
