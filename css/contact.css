@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .title {
+    position: relative;
+    text-align: center;
+    padding: 1rem .5rem;
+    margin: 0;
+  }
+  
+  .title:before, .title:after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    content: '';
+    color: rgb(15, 15, 15);
+    text-align: center;
+    margin:0;
+    background-color: black;
+  }
+  
+  .title:before {
+    top: 0;
+  }
+  
+  .title:after {
+    bottom: 0;
+  }
+  
+  p {
+    text-align: center;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 10px;
+  }
+  
+  #form {
+    padding-bottom: 10px;
+  }
+  
+  .contact {
+    width: 960px;/*横幅*/
+    margin: 0 auto;/*中央寄せ*/
+    border: 3px double rgb(75, 74, 69);
+    
+    padding: 60px 20px;
+  }
+  
+  .contact-table {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  
+  .contact-item, .contact-body {
+      padding: 20px;
+      border: 1.2px solid rgb(75, 74, 69);
+  }
+  
+  .contact-item {
+      text-align: left;
+      width: 30%;
+      background-color: rgb(240, 240, 240);
+      border-left: solid 6px #4effd3;
+      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+  }
+  
+  .contact-body {
+      width: 70%;
+  }
+  
+  #form {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .form-input {
+    width: 100%;
+  }
+  
+  #contacttype ::placeholder{
+    color: gray;
+  }
+  
+  #onamae ::placeholder{
+    color: gray;
+  }
+  
+  #onamae, #email, #telno {
+    width: 500px;
+    height: 35px;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+  }
+  
+  .output-button {
+    font-size: 20px;
+    padding:12px 62px;
+    transform: skew(-15deg);
+    border-radius: 2;
+    background-image: linear-gradient(90deg, #51f5ab 0%, #00e0fd 100%);
+    box-shadow: 4px 10px rgba(0, 0, 0, .1);
+    overflow: hidden;
+  }
+
+  .output-button a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .output-button a:hover {
+      color: black;
+  }

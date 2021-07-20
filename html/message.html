@@ -4,9 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>お問い合わせページ</title>
+    <link rel="stylesheet" href="../css/contact.css">
 </head>
 <body>
-    
+    <div class="contact">
+        <!--今回は送信時に完了メッセージだけが表示されるページに遷移するようにする-->
+            <div class="form-text">
+                <h1 class="title">お問い合わせフォーム</h1>
+                <p>弊社にご関心をお持ちいただきまして、ありがとうございます。<br>
+                ご相談や弊社施策についてなど、お気軽にお問い合わせ下さい。<br>
+                 お送りいただきました内容を確認次第、担当者よりご連絡させていただきます。<br><br>
+                    各項目に入力していただき、終わりましたら送信ボタンを押してください。</p>
+            </div>
+            
+            <!--| 学籍番号 | number | 非表示(hidden)項目で学籍番号を入力しておきます。-->
+            <input type="hidden" name="number" value="X20000">
+        
+            <table class="contact-table">
+                <!--| お名前 | onamae | 名前が入力されます。必須入力です。-->
+                <tr>
+                    <th class="contact-item">
+                        <label for="onamae">お名前</label>
+                    </th>
+                    <td class="contact-body">
+                        <input type="text" name="onamae" id="onamae" required  placeholder="*必須">  <!--必須入力-->
+                    </td>
+                </tr>
+                
+                    <!--| メールアドレス | email |メールアドレスが入力されます。-->
+                    <tr>
+                        <th class="contact-item">
+                            <label for="email">メールアドレス</label>
+                        </th>
+                        <td class="contact-body">
+                            <input type="email" name="email" id="email">
+                        </td>
+                    </tr>
+
+                    <!--| 電話番号 | telno |電話番号が入力されます。-->
+                    <tr>
+                        <th class="contact-item">
+                            <label for="telno">電話番号</label>
+                        </th>
+                        <td class="contact-body">
+                            <input type="telno" name="telno" id="telno">
+                        </td>
+                    </tr>
+                
+                    <!--| 返信が必要ですか？ | ismustrep |チェックが入っている場合には担当者より返信があります。-->
+                    <tr>
+                        <th class="contact-item">
+                            <label for="ismustrep">返信が必要ですか</label>
+                        </th>
+                        <td class="contact-body">
+                            <input type="checkbox" name="ismustrep" id="ismustrep">必要
+                        </td>
+                    </tr>
+                
+                    <!--| ご希望の連絡手段 | means |メールの場合:`mail`、電話の場合:`tel`-->
+                    <tr>
+                        <th class="contact-item">
+                            <label for="means1">ご希望の連絡手段</label>
+                        </th>
+                        <td class="contact-body">
+                            <input type="radio" name="means" id="means1" value="tel">電話
+                            <input type="radio" name="means" id="means2" value="mail">メール
+                        </td>
+                    </tr>
+        
+                    <!--| お問い合わせ種別 | contacttype |「Webサイト作成依頼」「見積もり依頼」「その他お問い合わせ」で値は1,2,3。必須入力です。-->
+                    <tr>
+                        <th class="contact-item">
+                            <label for="contacttype">お問い合わせ種別</label>
+                        </th>
+                        <td class="contact-body">
+                            <select name="contacttype" id="contacttype" required placeholder="*必須">  <!--必須入力-->
+                                <option value="">選択してください</option>
+                                <option value="1">グラフィックデザイン依頼</option>
+                                <option value="2">動画制作依頼</option>
+                                <option value="3">Webサイト制作依頼</option>
+                                <option value="4">その他のご要望</option>
+                            </select>   
+                        </td>
+                    </tr>
+            
+                    <!--| お問い合わせ内容 | contacttext |お問い合わせの内容が入ります。500文字程度は入力が可能な状態にしてください。必須入力です。-->
+                    <tr>
+                        <th class="contact-item">
+                            <label class="contacttext_label" for="contacttext">お問い合わせ内容</label>
+                        </th>
+                        <td class="contact-body">
+                            <textarea name="contacttext" id="contacttext" cols="50" rows="10" required></textarea>
+                        </td>
+                    </tr>
+            </table>
+
+            <!-- 送信ボタン -->
+            <div class="output-button">
+                <a href="message-finish.html" class="submit">送信</a>
+            </div>
+    </div>
 </body>
 </html>
