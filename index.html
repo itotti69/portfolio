@@ -7,7 +7,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/option.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="Vue.js" type="module"></script>
+    <script src="js/Vue.js" type="module"></script>
     <script src="//code.jquery.com/jquery-3.6.0.min.js"></script> 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -16,7 +16,7 @@
     <header class="header-main" id="background-1">
         <h1>
             <!--タイトルを押すとサイトのTOPに戻るようにaタグの中にタイトルを書いておく-->
-            <a href=".Page-Btn">KAZU</a>
+            <a href="#introduction">KAZU</a>
         </h1>
 
         <!--あとからここにアイコンを載せる-->
@@ -66,8 +66,10 @@
     </section>
 
     <!--この間になんらかのアニメーション-->
-    <section class="content-1"></section>
-
+    
+      <!--粒子-->
+      <div id="particles-js"></div>
+    
     <section id="introduction">
         <!--ここには自己紹介を書く-->
         <div class="name">
@@ -197,7 +199,7 @@
     </section>
 
     <div class="Page-Btn">
-      <a href="#introduction" id="topBtn">TOPへ</a>
+      <a href="#post2-2" id="topBtn">TOPへ</a>
     </div>
 
     <footer>
@@ -225,6 +227,9 @@
         </nav>
         <p class="copyright">(c) 2021- KAZU</p>
     </footer>
+
+    <script src="particles.min.js" ></script>
+    <script src="js/particle.js"></script>
     <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/vue-scrollto"></script>
 </body>
