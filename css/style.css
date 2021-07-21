@@ -8,6 +8,15 @@
     background-color: transparent;
 }
 
+.header-sub {
+    display: flex;
+    height: 55px;
+    padding: 0px 66px;
+    align-items: right;
+    color: black;
+    background-color: transparent;
+}
+
 .header-main h1 {
     padding-top: 50px;
 }
@@ -24,26 +33,45 @@
 
 .header-main ul li {
     margin: 0 0 0 17px;
-    font-size: 28px;
+    font-size: 36px;
 }
 
+.header-main ul li a {
+    /*relativeを指定*/
+	position: relative;
+}
+
+.header-main ul li.now a,
 .header-main ul li a:hover {
-    color: cyan;
-    font-size: 30px;
+    color: white;
+    font-size: 36px;
 }
 
-.header-sub ul li a:hover{
-    color: cyan;
-    font-size: 30px;
+.header-main ul li a::after {
+    content: '';
+    /*絶対配置にして線の出現位置を確定させる*/
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    /*線の形状に関して↓　(流れ星をイメージ）*/
+    width: 90%;
+    height: 5px;
+    background: cyan;
+    /*アニメーションの指定*/
+    transition: all .6s;  /*秒数0.6秒に設定*/
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: left;/*左を基点にする*/
 }
 
-.header-sub {
-    display: flex;
-    height: 55px;
-    padding: 0px 66px;
-    align-items: right;
-    color: black;
-    background-color: transparent;
+/*現在地とhoverの設定*/
+.header-main ul li.now a::after,
+.header-main ul li a:hover::after {
+    transform: scale(1, 1); /*xは１に設定（２に設定すると、隣まで影響を受ける）*/
+}
+
+
+.header-sub > ul > li a:hover{
+    color: cyan;
 }
 
 .header-sub .nav-menu-under {
@@ -60,6 +88,135 @@
     margin: 0 0 0 17px;
     font-size: 20px;
 }
+
+.menu-btn {
+    display: none;  /*最初は非表示にしておく*/
+    position: fixed;
+    top:15px;
+	right: 15px;
+	z-index: 999;
+    /*ボタンの形状*/
+	background:rgb(168, 240, 218);
+	cursor: pointer;
+    width: 40px;
+    height:40px;
+	border-radius: 7px;
+}
+
+/*ボタンのアイコン設定*/
+.menu-btn span{
+    display: inline-block;
+    transition: all .5s;
+    position: absolute;
+    left: 15px;
+    height: 4px;
+    border-radius: 3px;
+	background-color: white;
+  	width: 48%;
+  }
+
+.menu-btn span:nth-of-type(1) {
+	top:14px;	
+}
+
+.menu-btn span:nth-of-type(2) {
+	top:22px;
+}
+
+.menu-btn span:nth-of-type(3) {
+	top:30px;
+}
+
+/*activeクラスが付与された後のボタンのアイコン設定*/
+.menu-btn.active span:nth-of-type(1) {
+    top: 20px;
+    left: 20px;
+    transform: translateY(8px) rotate(-44deg);
+    width: 33%;
+}
+
+.menu-btn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.menu-btn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+/*fadeOutクラスが付与された後のボタンの出現アニメーション設定*/
+.fadeOut {
+    animation-name: fadeDownAnime;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    display: block;
+}
+
+
+@keyframes fadeDownAnime{
+  from {
+    opacity: 0;
+	transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*.doneクラスがついたヘッダー*/
+.header-main.dnone {
+	opacity: 0;/*透過0で非表示にする*/
+}
+
+/*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
+.header-main.dnone.action {
+	opacity: 1;/*不透明にする*/
+}
+
+
+/*.doneクラスがついたヘッダーのテキストナビゲーションの形状*/
+.header-main.dnone .nav-menu-top{
+    position:fixed;
+	top: 0;
+    left: 0;
+    /*最背面に持ってくる*/
+	z-index: -1;
+	width:100%;
+	height: 110vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+    opacity: 0;
+	transition: all 0.2s;
+}
+
+/*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
+.header-main.dnone.action .nav-menu-top{
+	opacity: 1;/*不透明に*/
+	z-index:3;/*最前面に*/
+	background: wheat;
+}
+
+.header-main.dnone.action .nav-menu-top ul{
+	display:block;  /*これを設定することでいままで横並びだったのが、縦並びに変化する*/
+}
+
+.header-main.dnone.action .nav-menu-top li a{
+	color: black;
+	text-decoration: none;
+	padding:13px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.4em;
+	transition:all 0.5s;
+}
+
 
 .top {
     color: white;
