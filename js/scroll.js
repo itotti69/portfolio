@@ -19,6 +19,8 @@ $(document).ready(function () {
 });
 
 
+//ここからハンバーガーメニューに関してのJavaScript
+
 //関数Humburgerは、スクロールしたときにハンバーガーメニューに変化する処理をまとめるためのもの
 function Humburger() {
 	//ヘッダーの高さを取得
@@ -34,13 +36,13 @@ function Humburger() {
 }
 
 // 画面をスクロールをしたら動かしたい場合の記述
-$(window).scroll(function () {
-	Humburger();//関数Humburgerをここで呼ぶ
-});
+    $(window).scroll(function () {
+	    Humburger();//関数Humburgerをここで呼ぶ
+    });
 
 // ページが読み込まれたらすぐに動かしたい場合の記述
-$(window).on('load', function () {
-	Humburger();//関数Humburgerをここで呼ぶ
+    $(window).on('load', function () {
+	    Humburger();//関数Humburgerをここで呼ぶ
 });
 
 
