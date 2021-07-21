@@ -42,7 +42,7 @@
     height: 55px;
     padding: 0px 66px;
     align-items: right;
-    color: white;
+    color: black;
     background-color: transparent;
 }
 
@@ -162,7 +162,7 @@
 }
 
 #website-design {
-    height: 220vh;
+    height: 250vh;
     border: 10px solid rgb(195, 248, 232);
 }
 
