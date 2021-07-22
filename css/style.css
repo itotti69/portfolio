@@ -37,33 +37,26 @@
 
 .header-main ul li a {
     /*relativeを指定*/
-	position: relative;
-}
-
-.header-main ul li.now a,
-.header-main ul li a:hover {
-    color: white;
-    font-size: 36px;
+	display: inline-block;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: none;
 }
 
 .header-main ul li a::after {
-    content: '';
-    /*絶対配置にして線の出現位置を確定させる*/
     position: absolute;
     bottom: 0;
-    left: 5%;
-    /*線の形状に関して↓　(流れ星をイメージ）*/
-    width: 90%;
-    height: 5px;
-    background: cyan;
-    /*アニメーションの指定*/
-    transition: all .6s;  /*秒数0.6秒に設定*/
-    transform: scale(0, 1);/*X方向0、Y方向1*/
-    transform-origin: left;/*左を基点にする*/
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: cyan;
+    transform: translate(-100%, 0);
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+    content: "";
 }
 
 /*現在地とhoverの設定*/
-.header-main ul li.now a::after,
 .header-main ul li a:hover::after {
     transform: scale(1, 1); /*xは１に設定（２に設定すると、隣まで影響を受ける）*/
 }
@@ -118,14 +111,28 @@
     left: 25px;
 }
 
+.menu-btn:active span:nth-of-type(1) {
+    transform: translateY(20px) rotate(-45deg);
+    left: 10px;
+}
+
 .menu-btn span:nth-of-type(2) {
 	top: 50px;
     left: 25px;
 }
 
+.menu-btn:active span:nth-of-type(2) {
+    opacity: 0;
+}
+
 .menu-btn span:nth-of-type(3) {
 	top: 70px;
     left: 25px;
+}
+
+.menu-btn:active span:nth-of-type(3) {
+    transform: translateY(-20px) rotate(45deg);
+    left: 10px;
 }
 
 /*activeクラスが付与された後のボタンのアイコン設定*/
@@ -267,7 +274,7 @@
 }
 
 .vision h2 {
-    max-width: 95%;
+    max-width: 9%;
 }
 
 #design {
