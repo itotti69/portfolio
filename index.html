@@ -15,14 +15,22 @@
     
 </head>
 <body>
-    <header class="header-main" id="background-1">
+    <!--まずはローディングアニメーションからスタート-->
+    <div id="loading">
+      <div id="my-logo"><img src="img/my-logo.png" alt="" clas="fadeUp"></div>
+    </div>
+
+    <div id="container">
+      <header class="header-main" id="background-1">
         <h1>
             <!--タイトルを押すとサイトのTOPに戻るようにaタグの中にタイトルを書いておく-->
             <a href="#introduction">KAZU</a>
         </h1>
 
-        <img src="img/my-logo.png">
-
+        <div class="my-logo">
+          <img src="img/my-logo.png">
+        </div>
+  
         <!--あとからここにアイコンを載せる-->
 
         <nav class="nav-menu-top" >
@@ -244,12 +252,13 @@
         </nav>
         <p class="copyright">(c) 2021- KAZU</p>
     </footer>
-
+    </div>
     
     <script src="js/ScrollReveal.js"></script>
     <script src="js/particle.js"></script>
     <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/vue-scrollto"></script>
     <script src="//unpkg.com/scrollreveal"></script>
+    <script src="js/loading.js"></script>
 </body>
 </html>

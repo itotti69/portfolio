@@ -5,6 +5,7 @@
     align-items: center;
     color:aquamarine;
     background-color: transparent;
+    position: relative;
 }
 
 .header-sub {
@@ -20,8 +21,13 @@
     padding-top: 50px;
 }
 
-.header-main .nav-menu-top {
+.my-logo {
+    margin-top: 300px;
     margin-left: auto;
+}
+
+.header-main .nav-menu-top {
+    margin-left: 750px;
 }
 
 .header-main ul {
@@ -270,11 +276,10 @@
     background-size: cover;
     /*背景画像は固定に*/
     background-position: center;
-    max-width: 100%;
 }
 
 .vision h2 {
-    max-width: 9%;
+    max-width: 93%;
 }
 
 #design {
@@ -378,6 +383,7 @@
     float: left;
     margin: 0 20px 10px 50px;
     position: relative;
+    text-align: center;
 }
 
 .design-content p {
@@ -415,6 +421,7 @@
     float: left;
     margin: 0 40px 10px 0;
     position: relative;
+    text-align: center;
 }
 
 .movie-content p {
