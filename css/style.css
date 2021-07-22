@@ -255,8 +255,9 @@
 
 #introduction {
     padding: 200px;
-    background-color: rgb(221, 215, 215);
+    background-color: rgba(69, 73, 114, 0.5);
     max-width: 100%;
+    color: black;
 }
 
 #introduction h1 {
@@ -319,7 +320,7 @@
 
 #movie-creation-title {
     padding: 13em;
-    background-color: rgb(247, 249, 250);
+    background-color: rgb(230, 239, 243);
 }
 
 #movie-creation h1 {
@@ -411,6 +412,8 @@
 }
 
 .movie-images p {
+    font-size: 38px;
+    padding: 4.2rem 10rem 0 0;
     color: white;
 }
 
@@ -440,9 +443,9 @@
 
 .movie-content .linkbutton {
     border: 5px solid white;
-    margin: 120px 0 0 100px;
+    margin: 120px 0 0 180px;
     align-items: center;
-    justify-content: cennter;
+    justify-content: center;
     color: black;
     background-color: whitesmoke;
 }
@@ -532,7 +535,7 @@
 .Page-Btn{
     position: fixed;
     right: 30px;
-    bottom: 30px;
+    bottom: 100px;
     width: 80px;
     height: 80px;
     line-height: 32px;
@@ -542,9 +545,13 @@
     background: #5bc8ac;
   }
 
+.Page-Btn img {
+    margin-top: 50px;
+}
+
 .Page-Btn > a {
-    margin-top: 100px;
-    padding-top: 120px;
+    margin-top: 0px;
+    padding-top: 0px;
     font-size: 20px;
     text-decoration: none;
     color: white;

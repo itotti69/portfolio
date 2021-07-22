@@ -37,6 +37,15 @@ a {
 #my-logo img {
     width:260px;
 }
+  
+  /****** Base style. ******/
+  body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
 
 /* fadeUpをするアイコンの動き */
 .fadeUp{
