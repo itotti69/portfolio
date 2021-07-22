@@ -143,7 +143,7 @@
 .menu-btn.active span:nth-of-type(3){
     top: 30px;
     left: 18px;
-    transform: translateY(-6px) rotate(45deg);
+    transform: translateY(-8px) rotate(45deg);
     width: 30%;
 }
 
@@ -201,7 +201,7 @@
 .header-main.dnone.action .nav-menu-top{
 	opacity: 1;/*不透明に*/
 	z-index:3;/*最前面に*/
-	background: rgba(179, 245, 196);
+	background: rgba(179, 245, 196, 0.8);
 }
 
 .header-main.dnone.action .nav-menu-top ul{
@@ -243,6 +243,7 @@
 #introduction {
     padding: 200px;
     background-color: rgb(221, 215, 215);
+    max-width: 100%;
 }
 
 #introduction h1 {
@@ -262,16 +263,18 @@
     background-size: cover;
     /*背景画像は固定に*/
     background-position: center;
+    max-width: 100%;
 }
 
 .vision h2 {
-        max-width: 60vh;
+    max-width: 95%;
 }
 
 #design {
     height: 200vh;
     /*border: 10px solid rgb(253, 188, 210);*/
     display: flex;
+    width: 100%;
 }
 
 #design-title {
@@ -280,6 +283,7 @@
     padding: 0 70px;
     background-color: rgb(26, 23, 24);
 }
+
 
 #design h1 {
     max-width: 50vh;
@@ -292,6 +296,7 @@
     font-size: 3em;
     padding: 10px 33px;
 }
+
 
 #movie-creation {
     max-height: 600vh;
@@ -345,6 +350,7 @@
     display: flex;
     justify-content: center;
     padding: 200px 0px 100px 0px;
+    max-width: 100%;
 }
 
 .design-images p {
@@ -367,6 +373,10 @@
     position: relative;
 }
 
+.design-content p {
+    text-align: center;
+}
+
 .design-content img {
     image-rendering: -webkit-optimize-contrast;
     max-width: 100%;
@@ -377,9 +387,8 @@
 }
 
 .design-content .linkbutton {
-    position: absolute;
-    bottom: 10vh;
-    left: 10vh;
+    margin-top: 80px;
+    margin-left: 60px;
 }
 
 .movie-images {
@@ -401,6 +410,11 @@
     position: relative;
 }
 
+.movie-content p {
+    margin-top: 0px;
+    text-align: center;
+}
+
 .movie-content img {
     image-rendering: -webkit-optimize-contrast;
     max-width: 100%;
@@ -412,9 +426,11 @@
 
 .movie-content .linkbutton {
     border: 5px solid white;
-    position: absolute;
-    top: 50vh;
-    left: 20vh;
+    margin: 120px 0 0 100px;
+    align-items: center;
+    justify-content: cennter;
+    color: black;
+    background-color: whitesmoke;
 }
 
 .website-images {
@@ -451,23 +467,49 @@
     vertical-align: middle;
 }
 
-.web-content .linkbutton {
-    width: 26vh;
-}
-
-.web-content .viewmore1 {  
+.website1  p {
+    font-size: 60px;
+    width: 28rem; 
+    height: 4rem;
     position: absolute;
-    top: 30vh;
-    right: 120vh;
+    right: 26em;
+    top: 2em;
 }
 
-.web-content .viewmore2 {
+.website2  p{
+    font-size: 60px;
+    width: 28rem; 
+    height: 4rem;
     position: absolute;
-    top: 40vh;
-    left: 125vh;
+    left: 29em;
+    top: 2em;
 }
 
-.web-content .viewmore3 {
+.website3 p {
+    font-size: 60px;
+    width: 28rem; 
+    height: 4rem;
+    position: absolute;
+    right: 32em;
+    top: 2em;
+}
+
+#viewmore1 {  
+    position: absolute;
+    bottom: 2rem;
+    right: 63em;
+    width: 10rem;
+}
+
+#viewmore2 {
+    width: 10rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 78em;
+}
+
+#viewmore3 {
+    width: 10rem;
     position: absolute;
     top: 45vh;
     right: 125vh;

@@ -7,10 +7,12 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/option.css">
     <link rel="stylesheet" href="css/style.css">
+    
     <script src="js/scroll.js" type="module"></script>
     <script src="//code.jquery.com/jquery-3.6.0.min.js"></script> 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
 </head>
 <body>
     <header class="header-main" id="background-1">
@@ -88,7 +90,7 @@
         </div>
     </section>
 
-    <section class="vision" id="background-2">
+    <section class="vision anim" id="background-2">
         <!--ここにメッセージを追加する（未来のビジョンなど）-->
         <h2>この先も進化を続けていく社会の中で、その時々にあったWebデザインのあり⽅を追求し、
              誰にでもわかりやすいWebサイトを制作していきたいと考えています。</h2>
@@ -106,8 +108,8 @@
             <div class="design-content" id="post1-1"> 
               <a data-fancybox="gallery01" href="img/kagee.jpg" data-caption="影絵<br>「馬」「コアラ」「イルカ」「ウサギ」">
                 <img src="img/kagee.jpg" alt="design image">
-                <p>影絵<br>「馬」「コアラ」「イルカ」「ウサギ」</p>
-                <a href="html/Detail-Page01.html" class="linkbutton viewmore">View More→</a>
+                <p>影絵・・・「馬」「コアラ」「イルカ」「ウサギ」</p>
+                <a href="html/Detail-Page01.html" class="linkbutton viewmore"><span>View More→</span></a>
               </a>
             </div>
             
@@ -115,7 +117,7 @@
               <a data-fancybox="gallery01" href="img/logo_tree.jpg" data-caption="「ロゴツリー」">
                 <img src="img/logo_tree.jpg" alt="design image">
                 <p>「ロゴツリー」</p>
-                <a class="linkbutton viewmore">View More→</a>
+                <a class="linkbutton viewmore"><span>View More→</span></a>
               </a>
             </div>
 
@@ -123,7 +125,7 @@
               <a data-fancybox="gallery01" href="img/JAPAN_poster.jpg" data-caption="ポスターコンペ">
                 <img src="img/JAPAN_poster.jpg" alt="design image">
                 <p>ポスターコンペ</p>
-                <a class="linkbutton viewmore">View More→</a>
+                <a class="linkbutton viewmore"><span>View More→</span></a>
               </a>
             </div>
 
@@ -142,7 +144,7 @@
               <a data-fancybox="gallery02" href="img/movie_0.jpg" data-caption="オープニング" >
                 <img src="img/movie_0.jpg" alt="movie image">
                 <p>オープニング</p>
-                <a class="linkbutton viewmore">View More→</a>
+                <a class="linkbutton viewmore"><span>View More→</span></a>
               </a>
               
             </div>
@@ -150,15 +152,15 @@
               <a data-fancybox="gallery02" href="img/movie_1.jpg" data-caption="「光と闇が待っているの」">
                 <img src="img/movie_1.jpg" alt="movie image">
                 <p>「光と闇が待っているの」</p>
-                <a class="linkbutton viewmore">View More→</a>
+                <a class="linkbutton viewmore"><span>View More→</span></a>
               </a>
             </div>
 
             <div class="movie-content" id="post2-3"> 
               <a data-fancybox="gallery02" href="img/daibutsu.jpg" data-caption="「僕らにはいつまでも」" >
                 <img src="img/daibutsu.jpg" alt="movie image">
-                <p>「僕らにはいつまでも」</p>
-                <a class="linkbutton viewmore">View More→</a>
+                <p>自己紹介ムービー</p>
+                <a class="linkbutton viewmore"><span>View More→</span></a>
               </a>
             </div>
 
@@ -174,8 +176,10 @@
 
         <div class="website-images">
             <div class="web-content" id="post3-1"> 
-              <p>Webサイト１</p>
-              <a class="linkbutton viewmore1">View More→</a>
+              <div id="web-content-message" class="website1">
+                <p>Webサイト１</p>
+                <a class="linkbutton" id="viewmore1"><span>View More→</span></a>
+              </div>
               <a data-fancybox="gallery03" href="img/meishi.jpg" data-caption="Webサイト１">
                 <img src="img/meishi.jpg" alt="website image">
               </a>
@@ -185,13 +189,17 @@
               <a data-fancybox="gallery03" href="img/Sample1.jpg" data-caption="Webサイト２">
                 <img src="img/Sample1.jpg" alt="website image">
               </a>
-              <p>Webサイト２</p>
-              <a class="linkbutton viewmore2">View More→</a>
+              <div id="web-content-message" class="website2">
+                <p>Webサイト２</p>
+                <a class="linkbutton" id="viewmore2"><span>View More→</span></a>
+              </div>
             </div>
 
             <div class="web-content" id="post3-3"> 
-              <p>Webサイト３</p>
-              <a class="linkbutton viewmore3">View More→</a>
+              <div id="web-content-message" class="website3">
+                <p>Webサイト３</p>
+                <a class="linkbutton" id="viewmore3"><span>View More→</span></a>
+              </div>
               <a data-fancybox="gallery03" href="img/Sample2.jpg" data-caption="Webサイト３">
                 <img src="img/Sample2.jpg" alt="website image">
               </a>
@@ -231,9 +239,10 @@
     </footer>
 
     
-    <script src="particles.min.js" ></script>
+    <script src="js/ScrollReveal.js"></script>
     <script src="js/particle.js"></script>
     <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/vue-scrollto"></script>
+    <script src="//unpkg.com/scrollreveal"></script>
 </body>
 </html>
