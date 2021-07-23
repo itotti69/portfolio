@@ -6,11 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Detail-Page.css">
     <title>詳細ページ１</title>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 </head>
 <body>
-    <h1>
-        <!--タイトルを押すとサイトのTOPに戻るようにaタグの中にタイトルを書いておく-->
-        <a href="/">KAZU</a>
-    </h1>
+    <div class="my-logo">
+        <h1>KAZU</h1>
+        <img src="../img/my-logo.png">
+    </div>
+    
+
+    <a href="../index.html" class="prev-btn border"><span>←back</span></a>
+    
+
+
+    <div class="box">
+        <div class="main js-main-img">
+          <img src="../img/tonakai.jpg"/>
+        </div>
+
+        <ul class="sub js-sub-img">
+          <li>
+            <img src="../img/tonakai.jpg"">
+          </li>
+          <li>
+              <img src="../img/kagee.jpg"/>
+          </li>
+          <li>
+              <img
+              src="../img/my-logo.png"/>
+          </li>
+        </ul>
+    </div>
+
+    <script src="../js/slide.js"></script>
 </body>
 </html>

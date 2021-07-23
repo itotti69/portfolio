@@ -1,0 +1,29 @@
+.my-logo {
+    display: flex;
+}
+
+.my-logo img {
+    height: 100px;
+    width: 90px;
+}
+
+.info {
+    text-align: center;
+ }
+
+ a {
+     text-decoration: none;
+     color: black;
+ }
+
+ a:hover {
+     color: rgb(6, 212, 6);
+ }
+
+ .finish-button {
+     padding: 30px 50px;
+     max-width: 25vh;
+     
+     color: white;
+     background-color: black;
+ }

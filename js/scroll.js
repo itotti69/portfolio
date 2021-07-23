@@ -67,6 +67,9 @@ $('.nav-menu-under li a').click(function () {
 	return false;
 });
 
+$(".menu-btn").click(function () {
+    $(this).toggleClass('active');
+});
 
 //このハンバーガーメニューを作る際に参考にしたサイト↓
 //動くWebデザインアイディア帳
