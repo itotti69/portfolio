@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(233, 243, 233);
+    background-image: url("../img/04-polish-wood.png");
 }
 
 .my-logo {
@@ -20,21 +20,16 @@ a {
     box-shadow: 10px 10px 15px 0px #444447;
 }
 
-a:hover {
-    color: rgb(6, 212, 6);
-}
-
+/*ボタンをクリックしたときに沈むようにする処理*/
 a:active {
     box-shadow: none;
     position: relative;
     top: 3px;
-
 }
 
+/*TOPへ戻るボタン*/
 .prev-btn{
-    /*線の基点とするためrelativeを指定*/
     position: relative;
-    /*ボタンの形状*/
     display: inline-block;
     color: #333;
     top: 10vh;
@@ -46,7 +41,7 @@ a:active {
     outline: none;
     /*アニメーションの指定*/
     transition: all .4s;
-    transition-delay: .8s;/*0.8秒遅れてアニメーション*/
+    transition-delay: .8s; /*0.8秒遅れてアニメーションスタート*/
 }
 
 /*hoverした際の、ボタンの背景とテキスト色の変更*/
@@ -55,7 +50,7 @@ a:active {
 	color: white;
 }
 
-/*線の設定*/
+/*線のdisplay設定*/
 .prev-btn span{
     display: block;
 }
@@ -78,27 +73,27 @@ a:active {
 .prev-btn::before,
 .prev-btn::after{
     content:"";
-    /*絶対配置で線の位置を決める*/   
+    /*絶対配置で線の位置を固定*/   
     position: absolute;
     /*線の形状*/   
     width: 0;
     height: 1px;
     background: #333;
-    /*アニメーションの指定*/
+    /*transitionでアニメーションの詳細をs指定*/
     transition: all 0.2s linear;
 }
 
-/*hoverした際、線が縦横100%伸びる*/
+/*hoverした際、線が縦に100%伸びる*/
 .prev-btn:hover span::before,
 .prev-btn:hover span::after{
     height: 100%;
 }
 
+/*hoverした際、線が横に100%伸びる*/
 .prev-btn:hover::before,
 .prev-btn:hover::after{
     width: 100%;
 }
-/*== 左下⇒右下⇒右上⇒左上⇒左下に枠線が伸びて塗りに */
 
 /*左下から右下へ伸びる横線*/
 .border::after{
@@ -110,7 +105,7 @@ a:active {
 .border span::after{
     right: 0;
     bottom: 0;
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
 }
 
 /*右上から左上へ伸びる横線*/
@@ -151,11 +146,11 @@ padding: 0;
 }
 
 h2 {
-    font-size: 1.4em;
+    font-size: 1em;
 }
 
 .main {
-    height: 1004px;
+    height: 50%;
     width: 100%;
 }
 
@@ -186,11 +181,12 @@ h2 {
 }
 
 .sub p {
-    font-size: 2em;
+    font-size: 1em;
 }
 .sub img {
     height: 100%;
     width: 100%;
+    box-shadow: 10px 10px 15px 0px #444447;
 }
 
 @media (max-width: 500px) {
@@ -212,3 +208,29 @@ h2 {
     text-align: center;
     margin-top: 40vh;
 }
+
+/*1.フェードインアニメーションの指定*/
+.scroll {opacity: 0;} /*一瞬表示されるのを防ぐ*/
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;         
+    }
+    100% {
+    opacity: 1;
+    transform: translate(0);
+    }
+}
+ 
+/*2.上下の動きを指定*/
+.updown {transform: translateY(-100px);}
+.downup {transform: translateY(100px);}
+ 
+/*3.左右の動きを指定*/
+.sect02{overflow: hidden;} /*横スクロールバーを隠す*/
+.slide-right {transform: translateX(200px);}
+.slide-left {transform: translateX(-200px);}

@@ -29,7 +29,7 @@
             <a href="#introduction" class="logo-link">KAZU</a>
         </h1>
 
-        <div class="my-logo">
+        <div class="my-logo scroll updown">
           <img src="img/my-logo.png">
         </div>
   
@@ -79,8 +79,8 @@
     </div>
 
     <!--画面最上部に載せる写真とコンテンツ-->
-    <section class="top" id="background-1">
-      <div class="top-title">
+    <section class="top " id="background-1">
+      <div class="top-title scroll updown">
         <h2>Welcome to mypage！</h2>
         <p>This is my portfolio site.</p>
       </div> 
@@ -88,7 +88,7 @@
 
     <!--この間になんらかのアニメーション-->
     
-    <section id="introduction">
+    <section id="introduction" class="scroll updown">
         <!--ここには自己紹介を書く-->
         <div class="name">
             <h1>伊藤和輝</h1>
@@ -106,20 +106,20 @@
 
     <section class="vision anim" id="background-2">
         <!--ここにメッセージを追加する（未来のビジョンなど）-->
-        <h2>この先も進化を続けていく社会の中で、その時々にあったWebデザインのあり⽅を追求し、
+        <h2 class="scroll updown">この先も進化を続けていく社会の中で、その時々にあったWebデザインのあり⽅を追求し、
              誰にでもわかりやすいWebサイトを制作していきたいと考えています。</h2>
     </section>
 
 
     <section id="design">
         <!--ここにはギャラリーでこれまで作った「デザイン」を載せる-->
-        <div id="design-title">
+        <div id="design-title" class="scroll slide-left">
             <h1>Section１</h1>
             <h2>〜グラフィックデザイン〜</h2>
         </div>
         
         <div class="design-images">
-            <div class="design-content" id="post1-1"> 
+            <div class="design-content scroll slide-left" id="post1-1"> 
               <a id="gallery" data-fancybox="gallery01" href="img/kagee.jpg" data-caption="影絵<br>「馬」「コアラ」「イルカ」「ウサギ」">
                 <img src="img/kagee.jpg" alt="design image">
                 <p>影絵・・・「馬」「コアラ」「イルカ」「ウサギ」</p>
@@ -127,19 +127,19 @@
               </a>
             </div>
             
-            <div class="design-content" id="post1-2"> 
+            <div class="design-content scroll slide-left" id="post1-2"> 
               <a id="gallery-2" data-fancybox="gallery01" href="img/logo_tree.jpg" data-caption="「ロゴツリー」">
                 <img src="img/logo_tree.jpg" alt="design image">
                 <p>「ロゴツリー」</p>
-                <a class="linkbutton viewmore"><span>View More→</span></a>
+                <a href="html/Detail-Page02.html" class="linkbutton viewmore"><span>View More→</span></a>
               </a>
             </div>
 
-            <div class="design-content" id="post1-3"> 
+            <div class="design-content scroll slide-left" id="post1-3"> 
               <a id="gallery-3" data-fancybox="gallery01" href="img/JAPAN_poster.jpg" data-caption="ポスターコンペ">
                 <img src="img/JAPAN_poster.jpg" alt="design image">
                 <p>ポスターコンペ</p>
-                <a class="linkbutton viewmore"><span>View More→</span></a>
+                <a href="html/Detail-Page02.html" class="linkbutton viewmore"><span>View More→</span></a>
               </a>
             </div>
 
@@ -148,12 +148,12 @@
 
     <section id="movie-creation">
         <!--ここにはギャラリーでこれまでに作った動画・アニメーション３DCGを載せる-->
-        <div id="movie-creation-title">
+        <div id="movie-creation-title" class="scroll downup">
           <h1>Section２</h1>
           <h2>〜動画・アニメーション・３DCG〜</h2>
         </div>
 
-        <div class="movie-images">
+        <div class="movie-images scroll downup">
             <div class="movie-content" id="post2-1"> 
               <a id="gallery" data-fancybox="gallery02" href="img/movie_0.jpg" data-caption="オープニング" >
                 <img src="img/movie_0.jpg" alt="movie image">
@@ -181,7 +181,7 @@
           </div>
     </section>
 
-    <section id="website-design">
+    <section id="website-design" class="scroll updown">
         <!--ここにはこれまでに作ったWebサイトのデザインを載せる-->
         <div id="website-design-title">
           <h1>Section３</h1>
@@ -260,5 +260,6 @@
     <script src="//cdn.jsdelivr.net/npm/vue-scrollto"></script>
     <script src="//unpkg.com/scrollreveal"></script>
     <script src="js/loading.js"></script>
+    <script src="../js/fadeInAnimation.js"></script>
 </body>
 </html>
