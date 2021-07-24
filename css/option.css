@@ -5,7 +5,6 @@
     padding: 0;
     max-width: 100%;
 }
-
 a {	
     /*aタグの見た目を整える*/
     text-decoration: none;
@@ -38,7 +37,6 @@ a {
     width:260px;
 }
   
-  /****** Base style. ******/
   body {
     display: flex;
     height: 100vh;
@@ -93,7 +91,8 @@ a.linkbutton{
     padding: 1.5rem 6rem;
     color: #fff;
     border-radius: 0;
-    background: #000;
+    background: rgb(15, 15, 15);
+    box-shadow: 10px 10px 15px 0px #444447;
 }
 
 a.linkbutton span {
@@ -115,3 +114,9 @@ a.linkbutton:before {
 a.linkbutton:hover:before {
     transform: translateX(0%);
   }
+
+a.linkbutton:active {
+    box-shadow: none;
+    position: relative;
+    top: 4px;
+}

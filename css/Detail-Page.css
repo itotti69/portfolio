@@ -16,10 +16,18 @@ width: 90px;
 a {
     text-decoration: none;
     color: black;
+    box-shadow: 10px 10px 15px 0px #444447;
 }
 
 a:hover {
     color: rgb(6, 212, 6);
+}
+
+a:active {
+    box-shadow: none;
+    position: relative;
+    top: 3px;
+
 }
 
 .prev-btn{
@@ -153,6 +161,7 @@ max-width: 50vw;
     height: 30vh;
     width: calc(96% / 3);
     border: 2px solid black;
+    background-color: white;;
 }
 
 .sub li:nth-child(3n) {
@@ -160,9 +169,7 @@ max-width: 50vw;
 }
 
 .sub {
-    border: 2px solid black;
     margin-top: 100px;
-   
 }
 .sub img {
     height: 100%;

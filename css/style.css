@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    
 }
 
 .header-main {
@@ -27,11 +28,55 @@
     padding-top: 50px;
 }
 
+.logo-link {
+    /*波紋の基点とするためrelativeを指定*/
+	position: relative;
+    /*リンクの形状*/
+	display:inline-block;
+    text-decoration: none;
+    
+    outline: none;
+}
+
+/*波形の設定*/
+.logo-link:hover::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left:30%;
+    top:0;
+    /*波形の形状*/
+    border: 10px solid rgb(13, 218, 245);
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+	opacity:1;
+    animation:1s circleanime forwards;
+}
+
+.logo-link:active {
+    position: relative;
+    top: 4px;
+}
+
+/*波形が広がるアニメーション*/
+@keyframes circleanime{
+	0%{
+	  transform: scale(0);
+	}
+	100%{
+		transform:scale(3);
+		opacity: 0;
+	}
+}
+
 .my-logo {
     margin-top: 300px;
     margin-left: auto;
     text-align: center;
 }
+
+
 
 .header-main ul {
     margin-left: 700px;
@@ -70,6 +115,11 @@
 /*現在地とhoverの設定*/
 .header-main ul li a:hover::after {
     transform: scale(1, 1); /*xは１に設定（２に設定すると、隣まで影響を受ける）*/
+}
+
+.header-main ul li a:active {
+    position: relative;
+    top: 4px;
 }
 
 .header-sub > ul > li a:hover{
@@ -399,6 +449,7 @@
 }
 
 .design-content p {
+    margin-top: 80px;
     text-align: center;
 }
 
@@ -408,7 +459,15 @@
     max-height: 100%;
     object-fit: cover;
     vertical-align: middle;
-    border: 5px solid black;
+    border: 2px solid black;
+    box-shadow: 20px 18px 18px 20px #0f0f1893;
+}
+
+.design-content img:active {
+    box-shadow: none;
+    position: relative;
+    left: 14px;
+    top: 12px;
 }
 
 .design-content .linkbutton {
@@ -493,6 +552,14 @@
     max-height: 100%;
     object-fit: cover;
     vertical-align: middle;
+    box-shadow: 20px 18px 18px 20px #0f0f1893;
+}
+
+.web-content img:active {
+    box-shadow: none;
+    position: relative;
+    left: 14px;
+    top: 12px;
 }
 
 .website1  p {
@@ -543,6 +610,52 @@
     right: 125vh;
 }
 
+#gallery:hover::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left:45%;
+    top:0;
+    /*波形の形状*/
+    border: 8px solid rgb(13, 218, 245);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+	opacity:1;
+    animation:1s circleanime forwards;
+}
+
+#gallery-2:hover::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left:45%;
+    top:37%;
+    /*波形の形状*/
+    border: 8px solid rgb(13, 218, 245);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+	opacity:1;
+    animation:1s circleanime forwards;
+}
+
+#gallery-3:hover::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left:45%;
+    bottom: 30%;
+    /*波形の形状*/
+    border: 8px solid rgb(13, 218, 245);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+	opacity:1;
+    animation:1s circleanime forwards;
+}
+
+
 .Page-Btn{
     position: fixed;
     right: 30px;
@@ -554,6 +667,7 @@
     text-align: center;
     border-radius: 50%;
     background: #5bc8ac;
+    box-shadow: 10px 10px 15px 0px #444447;
   }
 
 .Page-Btn img {
@@ -563,13 +677,37 @@
 .Page-Btn > a {
     margin-top: 0px;
     padding-top: 0px;
-    font-size: 20px;
+    font-size: 25px;
     text-decoration: none;
     color: white;
+    display: block;
+
+    
 }
 
 .Page-Btn > a:hover {
     color: yellow;
+}
+
+.Page-Btn > a:hover::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left:20%;
+    top:0;
+    /*波形の形状*/
+    border: 8px solid rgb(241, 245, 13);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+	opacity:1;
+    animation:1s circleanime forwards;
+}
+
+.Page-Btn > a:active {
+    box-shadow: none;
+    position: relative;
+    top: 4px;
 }
 
 footer {
@@ -605,7 +743,33 @@ footer ul li {
 }
 
 footer a {
-    display: inline-block;
+    /*波紋の基点とするためrelativeを指定*/
+	position: relative;
+    /*リンクの形状*/
+	display:inline-block;
+    text-decoration: none;
+    outline: none;
+}
+
+/*波形の設定*/
+footer a:hover::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left:30%;
+    top:0;
+    /*波形の形状*/
+    border: 8px solid rgb(13, 218, 245);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+	opacity:1;
+    animation:1s circleanime forwards;
+}
+
+footer a:active {
+    position: relative;
+    top: 4px;
 }
 
 .link-message {

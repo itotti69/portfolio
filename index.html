@@ -26,7 +26,7 @@
       <header class="header-main" id="background-1">
         <h1>
             <!--タイトルを押すとサイトのTOPに戻るようにaタグの中にタイトルを書いておく-->
-            <a href="#introduction">KAZU</a>
+            <a href="#introduction" class="logo-link">KAZU</a>
         </h1>
 
         <div class="my-logo">
@@ -43,9 +43,6 @@
                 <li>
                     <!--下３つはリンクをクリックした時に別ページへ遷移する-->
                     <a href="html/info.html">Info</a>
-                </li>
-                <li>
-                    <a href="html/About.html">About</a>
                 </li>
                 <li>
                     <a href="html/message.html">Message</a>
@@ -123,7 +120,7 @@
         
         <div class="design-images">
             <div class="design-content" id="post1-1"> 
-              <a data-fancybox="gallery01" href="img/kagee.jpg" data-caption="影絵<br>「馬」「コアラ」「イルカ」「ウサギ」">
+              <a id="gallery" data-fancybox="gallery01" href="img/kagee.jpg" data-caption="影絵<br>「馬」「コアラ」「イルカ」「ウサギ」">
                 <img src="img/kagee.jpg" alt="design image">
                 <p>影絵・・・「馬」「コアラ」「イルカ」「ウサギ」</p>
                 <a href="html/Detail-Page01.html" class="linkbutton viewmore"><span>View More→</span></a>
@@ -131,7 +128,7 @@
             </div>
             
             <div class="design-content" id="post1-2"> 
-              <a data-fancybox="gallery01" href="img/logo_tree.jpg" data-caption="「ロゴツリー」">
+              <a id="gallery-2" data-fancybox="gallery01" href="img/logo_tree.jpg" data-caption="「ロゴツリー」">
                 <img src="img/logo_tree.jpg" alt="design image">
                 <p>「ロゴツリー」</p>
                 <a class="linkbutton viewmore"><span>View More→</span></a>
@@ -139,7 +136,7 @@
             </div>
 
             <div class="design-content" id="post1-3"> 
-              <a data-fancybox="gallery01" href="img/JAPAN_poster.jpg" data-caption="ポスターコンペ">
+              <a id="gallery-3" data-fancybox="gallery01" href="img/JAPAN_poster.jpg" data-caption="ポスターコンペ">
                 <img src="img/JAPAN_poster.jpg" alt="design image">
                 <p>ポスターコンペ</p>
                 <a class="linkbutton viewmore"><span>View More→</span></a>
@@ -158,7 +155,7 @@
 
         <div class="movie-images">
             <div class="movie-content" id="post2-1"> 
-              <a data-fancybox="gallery02" href="img/movie_0.jpg" data-caption="オープニング" >
+              <a id="gallery" data-fancybox="gallery02" href="img/movie_0.jpg" data-caption="オープニング" >
                 <img src="img/movie_0.jpg" alt="movie image">
                 <p>MV ：「月色ホライズン」</p>
                 <a class="linkbutton viewmore"><span>View More→</span></a>
@@ -166,7 +163,7 @@
               
             </div>
             <div class="movie-content" id="post2-2"> 
-              <a data-fancybox="gallery02" href="img/movie_1.jpg" data-caption="「光と闇が待っているの」">
+              <a id="gallery" data-fancybox="gallery02" href="img/movie_1.jpg" data-caption="「光と闇が待っているの」">
                 <img src="img/movie_1.jpg" alt="movie image">
                 <p>「光と闇が待っているの」</p>
                 <a class="linkbutton viewmore"><span>View More→</span></a>
@@ -174,7 +171,7 @@
             </div>
 
             <div class="movie-content" id="post2-3"> 
-              <a data-fancybox="gallery02" href="img/daibutsu.jpg" data-caption="「僕らにはいつまでも」" >
+              <a id="gallery" data-fancybox="gallery02" href="img/daibutsu.jpg" data-caption="「僕らにはいつまでも」" >
                 <img src="img/daibutsu.jpg" alt="movie image">
                 <p>自己紹介ムービー</p>
                 <a class="linkbutton viewmore"><span>View More→</span></a>
@@ -197,13 +194,13 @@
                 <p>Webサイト１</p>
                 <a class="linkbutton" id="viewmore1"><span>View More→</span></a>
               </div>
-              <a data-fancybox="gallery03" href="img/meishi.jpg" data-caption="Webサイト１">
+              <a id="gallery" data-fancybox="gallery03" href="img/meishi.jpg" data-caption="Webサイト１" id="web-gallery">
                 <img src="img/meishi.jpg" alt="website image">
               </a>
             </div>
 
             <div class="web-content" id="post3-2"> 
-              <a data-fancybox="gallery03" href="img/Sample1.jpg" data-caption="Webサイト２">
+              <a id="gallery" data-fancybox="gallery03" href="img/Sample1.jpg" data-caption="Webサイト２">
                 <img src="img/Sample1.jpg" alt="website image">
               </a>
               <div id="web-content-message" class="website2">
@@ -217,7 +214,7 @@
                 <p>Webサイト３</p>
                 <a class="linkbutton" id="viewmore3"><span>View More→</span></a>
               </div>
-              <a data-fancybox="gallery03" href="img/Sample2.jpg" data-caption="Webサイト３">
+              <a id="gallery" data-fancybox="gallery03" href="img/Sample2.jpg" data-caption="Webサイト３">
                 <img src="img/Sample2.jpg" alt="website image">
               </a>
             </div>
@@ -228,7 +225,6 @@
     <div class="Page-Btn">
       <a href="#post2-2" id="topBtn">TOPへ</a>
       <img src="img/panda02.png">
-      
     </div>
 
     <footer>
@@ -237,9 +233,6 @@
           <ul>
               <li class="footer-logo">
                 <a href="html/Info.html">Info</a>
-              </li>
-              <li class="footer-logo">
-                <a href="html/About.html">About</a>
               </li>
               <li class="footer-logo">
                 <a href="html/message.html">Message</a>
