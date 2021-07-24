@@ -4,13 +4,14 @@ body {
 
 .my-logo {
     margin: 20px 30px;
-display: flex;
+    display: flex;
+    position: fixed;
 }
 
 .my-logo img {
     margin: 10px 20px;
-height: 100px;
-width: 90px;
+    height: 100px;
+    width: 90px;
 }
 
 a {
@@ -36,6 +37,8 @@ a:active {
     /*ボタンの形状*/
     display: inline-block;
     color: #333;
+    top: 10vh;
+    left: 1%;
     margin: 40px 50px;
     padding: 10px 40px;
     background-color: rgb(233, 233, 233);
@@ -85,8 +88,6 @@ a:active {
     transition: all 0.2s linear;
 }
 
-
-
 /*hoverした際、線が縦横100%伸びる*/
 .prev-btn:hover span::before,
 .prev-btn:hover span::after{
@@ -97,7 +98,6 @@ a:active {
 .prev-btn:hover::after{
     width: 100%;
 }
-
 /*== 左下⇒右下⇒右上⇒左上⇒左下に枠線が伸びて塗りに */
 
 /*左下から右下へ伸びる横線*/
@@ -134,11 +134,24 @@ margin: 0;
 padding: 0;
 }
 
+.title-message {
+    position: relative;
+    top: 10vh;
+    left: 3vw;
+}
+
+.title-message h1 {
+    font-size: 3.2em;
+}
+
 
 .box {
-margin: 50px auto 0;
-max-width: 50vw;
+    margin: 50px auto 0;
+    max-width: 50vw;
+}
 
+h2 {
+    font-size: 1.4em;
 }
 
 .main {
@@ -171,6 +184,10 @@ max-width: 50vw;
 .sub {
     margin-top: 100px;
 }
+
+.sub p {
+    font-size: 2em;
+}
 .sub img {
     height: 100%;
     width: 100%;
@@ -183,4 +200,15 @@ max-width: 50vw;
     .sub img {
         height: 21.4vw;
     }
+}
+
+.gaiyou {
+    font-size: 2em;
+    margin: 40vh 0 10vh;
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40vh;
 }
