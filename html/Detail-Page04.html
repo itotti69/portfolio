@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Detail-Page.css">
+    <title>詳細ページ4</title>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <style>
+        body {
+            background-image: url("../img/05-white-brick.png");
+        }
+
+        .title-message {
+            position: relative;
+            top: 9vh;
+            left: 13vw;
+        }
+    </style>
+</head>
+<body>
+    <!--左上にロゴを固定-->
+    <div class="my-logo">
+        <h1>KAZU</h1>
+        <img src="../img/my-logo.png">
+    </div>
+    
+    <!--TOPページに戻るボタンを設置-->
+    <!--左下→右下→右上→左上→左下の順に枠線が伸びて塗りに変化する-->
+    <a href="../index.html" class="prev-btn border">
+        <span>←back</span>
+    </a>
+
+    <!--タイトル-->
+    <div class="title-message">
+        <h1>MV制作</h1>
+    </div>
+
+    <!--メインコンテンツ-->
+    <div class="box">
+        <div class="main mainImg">
+          <img src="../img/movie_0.jpg"/>
+        </div>
+
+        <!--upsownクラスを付与することで上から下へのフェードインアニメーションを実現-->
+        <ul class="sub subImg scroll updown">
+          <li>
+            <img src="../img/movie_0.jpg"">
+            <h2>MV制作　『月色ホライズン [Alexandros]』</h2>
+            <p>制作期間:　１週間</p>
+          </li>
+          <li>
+              <img src="../img/movie_1.jpg"/>
+              <h2>「光と闇が待っているの、いるの」</h2>
+              <p>制作時間:約２時間</p>
+          </li>
+          <li>
+              <img src="../img/movie_2.jpg"/>
+              <h2>「僕らにはいつまでも」</h2>
+              <p>制作時間:２時間</p>
+          </li>
+        </ul>
+    </div>
+
+    <div class="gaiyou">
+        <!--updown クラスを付与することで上から下へのフェードインを実現-->
+        <p class="scroll updown">"Adobe Premiere Pro"と"After Effects"を使ってミュージックビデオ制作に取り組みました。<br>
+        　　映像制作ソフトを使うのは初めてで、もちろんミュージックビデオを作るのも初めてだったので、<br>
+        最初はほとんど何もわからない状態だったのですが、素材を1から集めることから始め、参考のビデオを観ながらより良い映像づくりを目指しました。</p>
+    </div>
+
+    <p class="copyright">(c) 2021- KAZU</p>
+
+    <!--JavaScriptの読み込み-->
+    <script src="../js/slide.js"></script>
+    <script src="../js/fadeInAnimation.js"></script>
+</body>
+</html>

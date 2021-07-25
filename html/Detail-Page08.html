@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Detail-Page.css">
+    <title>詳細ページ3</title>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <style>
+        body {
+            background-image: url("../img/01-fabric-shirt.png");
+        }
+
+        .title-message {
+            position: relative;
+            top: 9vh;
+            left: 13vw;
+        }
+    </style>
+</head>
+<body>
+    <!--左上にロゴを固定-->
+    <div class="my-logo">
+        <h1>KAZU</h1>
+        <img src="../img/my-logo.png">
+    </div>
+    
+    <!--TOPページに戻るボタンを設置-->
+    <!--左下→右下→右上→左上→左下の順に枠線が伸びて塗りに変化する-->
+    <a href="../index.html" class="prev-btn border">
+        <span>←back</span>
+    </a>
+
+    <!--タイトル-->
+    <div class="title-message">
+        <h1>Poster</h1>
+    </div>
+
+    <!--メインコンテンツ-->
+    <div class="box">
+        <div class="main mainImg">
+          <img src="../img/JAPAN_poster.jpg"/>
+        </div>
+
+        <!--upsownクラスを付与することで上から下へのフェードインアニメーションを実現-->
+        <ul class="sub subImg scroll updown">
+          <li>
+            <img src="../img/JAPAN_poster.jpg"">
+            <h2>ポスター　『バンフー学生Tシャツデザインコンテスト』<br>左上のキャラクターが「サクラ」で、右下のキャラクターが「モミジ」</h2>
+            <p>制作時間:約１時間</p>
+          </li>
+          <li>
+              <img src="../img/poster.jpg"/>
+              <h2>ポスター　『和』</h2>
+              <p>制作時間:約30分</p>
+          </li>
+          <li>
+              <img src="../img/sakura.jpg"/>
+              <h2>東京オリンピック2020公式キャラクター最終選考まで残り、ソメイティに敗れた『サクラ』</h2>
+              <p>制作時間:15分</p>
+          </li>
+        </ul>
+    </div>
+
+    <div class="gaiyou">
+        <!--updown クラスを付与することで上から下へのフェードインを実現-->
+        <p class="scroll updown">コンペエントリー用のポスターを作成しました。<br>
+        　　去年作成したもので東京オリンピックが開催されることを想定していたので、表記が2020となっています。</p>
+    </div>
+
+    <p class="copyright">(c) 2021- KAZU</p>
+
+    <!--JavaScriptの読み込み-->
+    <script src="../js/slide.js"></script>
+    <script src="../js/fadeInAnimation.js"></script>
+</body>
+</html>
