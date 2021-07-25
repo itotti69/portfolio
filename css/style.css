@@ -412,14 +412,13 @@
 }
 
 #website-design h1 {
-    max-width: 40vh;
     padding: 200px 50px 0px 130px;
     font-size: 5em;
 }
 
 #website-design h2 {
     font-size: 3em;
-    padding-left: 130px;
+    padding-left: 19px;
 }
 
 .design-images {
@@ -429,7 +428,6 @@
 }
 
 .design-images p {
-    font-size: 20px;
     color: black;
 }
 
@@ -445,7 +443,7 @@
     max-width: 40vh;
     max-height: 90vh;
     float: left;
-    margin: 0 20px 10px 50px;
+    margin: 0 20px 10px 10px;
     position: relative;
     text-align: center;
     width : calc(100% / 3) ;
@@ -536,6 +534,7 @@
 
 #post3-2 {
     float: left;
+    margin-bottom: 30vh;
 }
 
 #post3-3 {
@@ -585,7 +584,7 @@
     width: 28rem; 
     height: 4rem;
     position: absolute;
-    right: 32em;
+    right: 11em;
     top: 2em;
 }
 
@@ -595,15 +594,14 @@
 
 #viewmore1 {  
     position: absolute;
-    top: auto;
-    left: 90vh;
+    top: 20vh;
     width: 10rem;
 }
 
 #viewmore2 {
     width: 10rem;
     position: absolute;
-    bottom: 2rem;
+    top: 20vh;
     left: 35em;
 }
 
