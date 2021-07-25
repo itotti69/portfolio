@@ -341,6 +341,7 @@
 
 .vision h2 {
     max-width: 93%;
+    font-size: 1.1em;
 }
 
 #design {
@@ -495,6 +496,7 @@
     margin: 0 40px 10px 0;
     position: relative;
     text-align: center;
+    width : calc(100% / 3) ;
 }
 
 .movie-content p {
