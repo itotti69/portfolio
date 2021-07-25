@@ -15,15 +15,6 @@
     max-width: 100%;
 }
 
-.header-sub {
-    display: flex;
-    height: 55px;
-    padding: 0px 66px;
-    align-items: right;
-    color: black;
-    background-color: transparent;
-}
-
 .header-main h1 {
     padding-top: 50px;
 }
@@ -34,7 +25,6 @@
     /*リンクの形状*/
 	display:inline-block;
     text-decoration: none;
-    
     outline: none;
 }
 
@@ -75,8 +65,6 @@
     margin-left: auto;
     text-align: center;
 }
-
-
 
 .header-main ul {
     margin-left: 700px;
@@ -122,23 +110,8 @@
     top: 4px;
 }
 
-.header-sub > ul > li a:hover{
-    color: cyan;
-}
-
-.header-sub .nav-menu-under {
-    /*タイトル以外のナビゲーション項目は全て右寄せに*/
-    margin-left: auto;
-}
-
-.header-sub ul {
+.navi ul {
     list-style: none;
-    display: flex;
-}
-
-.header-sub ul li {
-    margin: 0 0 0 17px;
-    font-size: 20px;
 }
 
 .menu-btn {
