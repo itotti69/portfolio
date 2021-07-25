@@ -131,7 +131,7 @@ padding: 0;
 
 .title-message {
     position: relative;
-    top: 15vh;
+    top: 13vh;
     left: 3vw;
 }
 
@@ -141,7 +141,7 @@ padding: 0;
 
 
 .box {
-    margin: 50px auto 0;
+    margin: 60px auto 0;
     max-width: 50vw;
 }
 
