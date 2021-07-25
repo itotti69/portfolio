@@ -331,7 +331,7 @@
 .vision {
     /*画面サイズが狭ければ、背景の写真にあるホワイトボードの中に
     文字が収まるようにpaddingを調整してみた*/
-    padding: 440px 70vh 68vh;
+    padding: 330px 70vh 68vh;
     text-align: center;
     /*背景画像の設定*/
     background-size: cover;
@@ -603,7 +603,7 @@
     width: 10rem;
     position: absolute;
     bottom: 2rem;
-    left: 60em;
+    left: 35em;
 }
 
 #viewmore3 {
