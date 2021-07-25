@@ -354,7 +354,7 @@
 #design-title {
     color: white;
     max-width: 90vh;
-    padding: 30px 70px;
+    padding: 30px 20px;
     background-color: rgb(26, 23, 24);
 }
 
@@ -424,13 +424,12 @@
 
 .design-images {
     display: flex;
-    justify-content: center;
     padding: 200px 0px 100px 0px;
     width: 100%;
 }
 
 .design-images p {
-    font-size: 38px;
+    font-size: 20px;
     color: black;
 }
 
