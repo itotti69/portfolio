@@ -331,7 +331,7 @@
 .vision {
     /*画面サイズが狭ければ、背景の写真にあるホワイトボードの中に
     文字が収まるようにpaddingを調整してみた*/
-    padding: 230px 70vh 68vh;
+    padding: 280px 70vh 68vh;
     text-align: center;
     /*背景画像の設定*/
     background-size: cover;
@@ -354,20 +354,22 @@
 #design-title {
     color: white;
     max-width: 90vh;
-    padding: 0 70px;
+    padding: 30px 70px;
     background-color: rgb(26, 23, 24);
 }
 
 
 #design h1 {
     max-width: 50vh;
+    /*
     padding: 200px 30px 0px 130px;
     margin-right: 100px;
-    font-size: 4em;
+    */
+    font-size: 3em;
 }
 
 #design h2 {
-    font-size: 3em;
+    font-size: 1em;
     padding: 10px 33px;
 }
 
@@ -484,8 +486,8 @@
 }
 
 .movie-images p {
-    font-size: 38px;
-    padding: 4.2rem 10rem 0 0;
+    font-size: 25px;
+    padding: 4.2rem 0 0 0;
     color: white;
 }
 
@@ -516,11 +518,12 @@
 
 .movie-content .linkbutton {
     border: 5px solid white;
-    margin: 120px 0 0 180px;
+    margin: 120px 0 0 0;
     align-items: center;
     justify-content: center;
     color: black;
     background-color: whitesmoke;
+    padding: 1.5rem 3rem;
 }
 
 .website-images {
@@ -530,7 +533,6 @@
 
 #post3-1 {
     float: right;
-    padding-right: 30vh;
 }
 
 #post3-2 {
@@ -594,8 +596,8 @@
 
 #viewmore1 {  
     position: absolute;
-    bottom: 2rem;
-    right: 63em;
+    top: auto;
+    left: 90vh;
     width: 10rem;
 }
 
@@ -610,7 +612,7 @@
     width: 10rem;
     position: absolute;
     top: 45vh;
-    right: 125vh;
+    right: 90vh;
 }
 
 #gallery:hover::before {
