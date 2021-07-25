@@ -315,7 +315,7 @@
 
 #introduction {
     padding: 200px;
-    background-color: rgba(69, 73, 114, 0.5);
+    background-color: rgba(243, 243, 247, 0.5);
     max-width: 100%;
     color: black;
 }
@@ -355,7 +355,7 @@
     color: white;
     width: 50vh;
     padding: 30px 20px;
-    background-color: rgb(26, 23, 24);
+    background-color: rgb(85, 84, 84);
 }
 
 
@@ -781,16 +781,10 @@ footer a:active {
     font-size: 30px;
 }
 
-i {
-    font-size: 40px;
-    margin-right: 20px;
-}
-
 .copyright {
     margin: 0;
     padding: 70px 0 0 0;
 }
-
 
 /*1.フェードインアニメーションの指定*/
 .scroll {opacity: 0;} /*一瞬表示されるのを防ぐ*/
