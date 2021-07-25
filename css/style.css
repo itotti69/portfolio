@@ -750,6 +750,11 @@ footer a:active {
     top: 4px;
 }
 
+footer p {
+    margin-top: 3em;
+    color: white;
+}
+
 .link-message {
     font-size: 30px;
 }
