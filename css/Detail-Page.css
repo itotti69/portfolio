@@ -131,7 +131,7 @@ padding: 0;
 
 .title-message {
     position: relative;
-    top: 10vh;
+    top: 15vh;
     left: 3vw;
 }
 
@@ -199,6 +199,7 @@ h2 {
 }
 
 .gaiyou {
+    color: rgb(61, 60, 60);
     font-size: 2em;
     margin: 40vh 0 10vh;
     text-align: center;
