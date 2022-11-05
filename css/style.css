@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    
+
 }
 
 .header-main {
@@ -9,21 +9,21 @@
     height: 10vh;
     padding: 0px 66px;
     align-items: center;
-    color:aquamarine;
+    color: aquamarine;
     background-color: transparent;
     position: relative;
     max-width: 100%;
 }
 
 .header-main h1 {
-    padding-top: 50px;
+    padding-top: 1.1rem;
 }
 
 .logo-link {
     /*波紋の基点とするためrelativeを指定*/
-	position: relative;
+    position: relative;
     /*リンクの形状*/
-	display:inline-block;
+    display: inline-block;
     text-decoration: none;
     outline: none;
 }
@@ -33,15 +33,15 @@
     content: '';
     /*絶対配置で波形の位置を決める*/
     position: absolute;
-    left:30%;
-    top:0;
+    left: 30%;
+    top: 0;
     /*波形の形状*/
     border: 10px solid rgb(13, 218, 245);
     width: 78px;
     height: 78px;
     border-radius: 50%;
-	opacity:1;
-    animation:1s circleanime forwards;
+    opacity: 1;
+    animation: 1s circleanime forwards;
 }
 
 .logo-link:active {
@@ -50,24 +50,25 @@
 }
 
 /*波形が広がるアニメーション*/
-@keyframes circleanime{
-	0%{
-	  transform: scale(0);
-	}
-	100%{
-		transform:scale(3);
-		opacity: 0;
-	}
+@keyframes circleanime {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
 }
 
 .my-logo {
-    margin-top: 300px;
-    margin-left: auto;
+    margin-top: 14rem;
+    margin: 14rem auto 0;
     text-align: center;
 }
 
 .header-main ul {
-    margin-left: 700px;
+    margin-left: 300px;
     list-style: none;
     /*リストを横並びに配置する*/
     display: flex;
@@ -81,7 +82,7 @@
 
 .header-main ul li a {
     /*relativeを指定*/
-	display: inline-block;
+    display: inline-block;
     position: relative;
     overflow: hidden;
     color: #fff;
@@ -102,7 +103,8 @@
 
 /*現在地とhoverの設定*/
 .header-main ul li a:hover::after {
-    transform: scale(1, 1); /*xは１に設定（２に設定すると、隣まで影響を受ける）*/
+    transform: scale(1, 1);
+    /*xは１に設定（２に設定すると、隣まで影響を受ける）*/
 }
 
 .header-main ul li a:active {
@@ -115,33 +117,34 @@
 }
 
 .menu-btn {
-    display: none;  /*最初は非表示にしておく*/
+    display: none;
+    /*最初は非表示にしておく*/
     position: fixed;
     top: 50px;
-	right: 50px;
-	z-index: 999;
+    right: 50px;
+    z-index: 999;
     /*ボタンの形状*/
-	background:rgba(11, 8, 27, 0.322);
-	cursor: pointer;
+    background: rgba(11, 8, 27, 0.322);
+    cursor: pointer;
     width: 100px;
     height: 100px;
-	border-radius: 16px;
+    border-radius: 16px;
 }
 
 /*ハンバーガーメニューボタンの見た目設定*/
-.menu-btn span{
+.menu-btn span {
     display: inline-block;
     transition: all .5s;
     position: absolute;
     left: 15px;
     height: 6px;
     border-radius: 3px;
-	background-color: white;
-  	width: 48%;
-  }
+    background-color: white;
+    width: 48%;
+}
 
 .menu-btn span:nth-of-type(1) {
-	top: 30px;	
+    top: 30px;
     left: 25px;
 }
 
@@ -151,7 +154,7 @@
 }
 
 .menu-btn span:nth-of-type(2) {
-	top: 50px;
+    top: 50px;
     left: 25px;
 }
 
@@ -160,7 +163,7 @@
 }
 
 .menu-btn span:nth-of-type(3) {
-	top: 70px;
+    top: 70px;
     left: 25px;
 }
 
@@ -178,10 +181,10 @@
 }
 
 .menu-btn.active span:nth-of-type(2) {
-	opacity: 0;
+    opacity: 0;
 }
 
-.menu-btn.active span:nth-of-type(3){
+.menu-btn.active span:nth-of-type(3) {
     top: 50px;
     left: 12px;
     transform: translateY(-6px) rotate(45deg);
@@ -198,69 +201,74 @@
 }
 
 
-@keyframes fadeDownAnime{
-  from {
-    opacity: 0;
-	transform: translateY(-100px);
-  }
+@keyframes fadeDownAnime {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
 
-  to {
-    opacity: 1;
-	transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /*.doneクラスがついたヘッダー*/
 .header-main.dnone {
-	opacity: 0;/*透過0で非表示にする*/
+    opacity: 0;
+    /*透過0で非表示にする*/
 }
 
 /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
 .header-main.dnone.action {
-	opacity: 1;/*不透明にする*/
+    opacity: 1;
+    /*不透明にする*/
 }
 
 
 /*.doneクラスがついたヘッダーのテキストナビゲーションの形状*/
-.header-main.dnone .nav-menu-top{
-    position:fixed;
-	top: 0;
+.header-main.dnone .nav-menu-top {
+    position: fixed;
+    top: 0;
     left: 0;
     /*最背面に持ってくる*/
-	z-index: -1;
-	height: 110vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+    z-index: -1;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     opacity: 0;
-	transition: all 0.2s;
+    transition: all 0.2s;
 }
 
 /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
-.header-main.dnone.action .nav-menu-top{
-	opacity: 1;/*不透明に*/
-	z-index:3;/*最前面に*/
-	background: rgba(179, 245, 196, 0.95);
+.header-main.dnone.action .nav-menu-top {
+    opacity: 1;
+    /*不透明に*/
+    z-index: 3;
+    /*最前面に*/
+    background: rgba(179, 245, 196, 0.95);
     width: 100%;
 }
 
-.header-main.dnone.action .nav-menu-top ul{
-	display:block;  /*これを設定することでいままで横並びだったのが、縦並びに変化する*/
+.header-main.dnone.action .nav-menu-top ul {
+    display: block;
+    /*これを設定することでいままで横並びだったのが、縦並びに変化する*/
 }
 
-.header-main.dnone.action .nav-menu-top li a{
-	color: black;
-	text-decoration: none;
-	padding:30px;
-	display: block;
-	text-transform: uppercase;
-	letter-spacing: 0.4em;
-	transition:all 0.5s;
+.header-main.dnone.action .nav-menu-top li a {
+    color: black;
+    text-decoration: none;
+    padding: 30px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    transition: all 0.5s;
 }
 
-.header-main.dnone.action .nav-menu-top li a::after{
-	background-color: tomato;
+.header-main.dnone.action .nav-menu-top li a::after {
+    background-color: tomato;
     height: 20px;
 }
 
@@ -278,7 +286,7 @@
 }
 
 .top h2 {
-    padding-top: 200px;
+    padding-top: 17rem;
 }
 
 .content-1 {
@@ -294,11 +302,12 @@
 }
 
 #introduction h1 {
-    font-size: 40px;
+    font-size: 4rem;
 }
 
 .career {
     padding-top: 20px;
+    font-size: 2rem;
 }
 
 .vision {
@@ -313,22 +322,261 @@
 }
 
 .vision h2 {
-    max-width: 93%;
-    font-size: 1.1em;
+    font-size: 1.8em;
+}
+
+
+.vision-container {
+    width: 50rem;
+    margin: 0 auto;
+    padding-bottom: 8rem;
+    padding-right: 2rem;
+}
+
+@media screen and (max-width: 1868px) {}
+
+@media screen and (min-width: 2550px) {
+    .vision-container {
+        width: 50rem;
+        margin: 0 auto;
+        padding-bottom: 8rem;
+        padding-right: 2rem;
+    }
+
+    .vision h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 2550px) {
+    .vision-container {
+        width: 40rem;
+        margin: 0 auto;
+        padding-bottom: 4rem;
+        padding-right: 2rem;
+    }
+
+    .vision h2 {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 2200px) {
+    .vision-container {
+        width: 35rem;
+        margin: 0 auto;
+        padding-bottom: 2rem;
+        padding-right: 2rem;
+    }
+
+    .vision h2 {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 1750px) {
+    .vision-container {
+        width: 28rem;
+        margin: 0 auto;
+        padding-top: 3rem;
+        padding-right: 2rem;
+    }
+
+    .vision h2 {
+        font-size: 1.0em;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .vision-container {
+        display: none;
+    }
+}
+
+/* ハッカソンについてのCSS */
+#hackason {
+    border: 10px solid rgba(175, 38, 210, 0.5);
+    text-align: center;
+    height: auto;
+}
+
+#hackason-title {
+    /* max-width: 30%; */
+    padding-bottom: 10vh;
+    background-color: rgba(175, 38, 210, 0.5);
+    color: white;
+}
+
+#hackason h1 {
+    padding: 100px 50px 0px 30px;
+    font-size: 5em;
+}
+
+#hackason h2 {
+    font-size: 2.5em;
+    padding-left: 19px;
+}
+
+.hackason-box {
+    /* padding: 30px 81px 100px 81px; */
+    margin: 8rem;
+    height: 30rem;
+    text-align: center;
+}
+
+.info-message {
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+}
+
+.info-title {
+    font-size: 2rem;
+}
+
+.hackason-content {
+    height: 100%;
+    width: 100%;
+    /* 要素を横並び表示 */
+    display: flex;
+    position: relative;
+}
+
+.hackason-content img {
+    image-rendering: -webkit-optimize-contrast;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    box-shadow: 20px 18px 18px 20px #0f0f1893;
+}
+
+.hackason-content img:active {
+    box-shadow: none;
+    position: relative;
+    left: 14px;
+    top: 12px;
+}
+
+#hackason-content-message {
+    margin-right: 10rem;
+    height: 100%;
+
+}
+
+.hackason-images {
+    margin-right: 20rem;
+}
+
+.hackason-link {
+    margin: auto 0;
+}
+
+.website1 p {
+    font-size: 60px;
+    width: 28rem;
+    height: 4rem;
+
+}
+
+
+/* WebサイトについてのCSS */
+#webSite {
+    border: 10px solid rgba(24, 10, 217, 0.5);
+    text-align: center;
+    height: auto;
+}
+
+#webSite-title {
+    /* max-width: 30%; */
+    padding-bottom: 10vh;
+    background-color: rgba(24, 10, 217, 0.5);
+    color: white;
+}
+
+#webSite h1 {
+    padding: 100px 50px 0px 30px;
+    font-size: 5em;
+}
+
+#webSite h2 {
+    font-size: 2.5em;
+    padding-left: 19px;
+}
+
+.webSite-box {
+    /* padding: 30px 81px 100px 81px; */
+    margin: 8rem;
+    height: 30rem;
+    text-align: center;
+}
+
+.info-message {
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+}
+
+.info-title {
+    font-size: 2rem;
+}
+
+.webSite-content {
+    height: 100%;
+    width: 100%;
+    /* 要素を横並び表示 */
+    display: flex;
+    position: relative;
+}
+
+.webSite-content img {
+    image-rendering: -webkit-optimize-contrast;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    box-shadow: 20px 18px 18px 20px #0f0f1893;
+}
+
+.webSite-content img:active {
+    box-shadow: none;
+    position: relative;
+    left: 14px;
+    top: 12px;
+}
+
+#webSite-content-message {
+    margin-right: 10rem;
+    height: 100%;
+
+}
+
+.webSite-images {
+    margin-right: 20rem;
+}
+
+.webSite-link {
+    margin: auto 0;
+}
+
+.website1 p {
+    font-size: 60px;
+    width: 28rem;
+    height: 4rem;
 }
 
 #design {
     height: 300vh;
-    /*border: 10px solid rgb(253, 188, 210);*/
+    border: 10px solid rgb(253, 188, 210);
     display: flex;
-    width: 100%;
+    /* width: 100%; */
+
 }
 
 #design-title {
     color: white;
-    width: 50vh;
+    /* width: 50vh; */
     padding: 30px 20px;
     background-color: rgb(85, 84, 84);
+    height: auto;
 }
 
 
@@ -360,7 +608,7 @@
 }
 
 #movie-creation h1 {
-    max-width: 27rem;
+    /* max-width: 27rem; */
     position: relative;
     top: 10px;
     left: 130px;
@@ -373,31 +621,13 @@
     padding-left: 130px;
 }
 
-#website-design {
-    height: 250vh;
-    border: 10px solid rgb(195, 248, 232);
-}
-
-#website-design-title {
-    max-width: 30%;
-    padding-bottom: 10vh;
-    background-color: rgb(168, 240, 218);
-}
-
-#website-design h1 {
-    padding: 100px 50px 0px 30px;
-    font-size: 5em;
-}
-
-#website-design h2 {
-    font-size: 2.5em;
-    padding-left: 19px;
-}
-
 .design-images {
     display: flex;
-    padding: 200px 0px 100px 0px;
-    width: 100%;
+    /* padding: 200px 0px 100px 0px; */
+    margin-top: 2rem;
+    /* width: 100%; */
+    height: auto;
+    width: auto;
 }
 
 .design-images p {
@@ -412,14 +642,14 @@
     padding-top: 1320px;
 }
 
-.design-content{
-    max-width: 40vh;
+.design-content {
+    /* max-width: 40vh; */
     max-height: 90vh;
-    float: left;
-    margin: 0 20px 10px 20px;
+    /* float: left; */
+    margin: 0 0px 10px 200px;
     position: relative;
     text-align: center;
-    width : calc(100% / 3) ;
+    /* width: calc(100% / 3); */
 }
 
 .design-content p {
@@ -461,7 +691,7 @@
     color: white;
 }
 
-.movie-content{
+.movie-content {
     border: 5px solid white;
     max-width: 100vh;
     height: 50em;
@@ -469,7 +699,7 @@
     margin: 0 40px 10px 0;
     position: relative;
     text-align: center;
-    width : calc(100% / 3) ;
+    width: calc(100% / 3);
 }
 
 .movie-content p {
@@ -496,6 +726,27 @@
     padding: 1.5rem 3rem;
 }
 
+#website-design {
+    height: 60rem;
+    border: 10px solid rgb(195, 248, 232);
+}
+
+#website-design-title {
+    max-width: 30%;
+    padding-bottom: 10vh;
+    background-color: rgb(168, 240, 218);
+}
+
+#website-design h1 {
+    padding: 100px 50px 0px 30px;
+    font-size: 5em;
+}
+
+#website-design h2 {
+    font-size: 2.5em;
+    padding-left: 19px;
+}
+
 .website-images {
     justify-content: center;
     padding: 30px 81px 100px 81px;
@@ -511,12 +762,12 @@
 }
 
 #post3-3 {
-    float: right; 
+    float: right;
 }
 
-.web-content{
+.web-content {
     max-width: 100vh;
-    max-height: 100%;
+    max-height: auto;
     margin: 0 40px 120px 0;
     display: flex;
     position: relative;
@@ -538,23 +789,23 @@
     top: 12px;
 }
 
-.website1  p {
+.website1 p {
     font-size: 60px;
-    width: 28rem; 
+    width: 28rem;
     height: 4rem;
-    
+
 }
 
-.website2  p{
+.website2 p {
     font-size: 60px;
-    width: 28rem; 
+    width: 28rem;
     height: 4rem;
     padding-left: 100px;
 }
 
 .website3 p {
     font-size: 60px;
-    width: 28rem; 
+    width: 28rem;
     height: 4rem;
     position: absolute;
     right: 11em;
@@ -565,7 +816,7 @@
     width: 800px;
 }
 
-#viewmore1 {  
+#viewmore1 {
     position: absolute;
     top: 20vh;
     width: 10rem;
@@ -590,49 +841,49 @@
     content: '';
     /*絶対配置で波形の位置を決める*/
     position: absolute;
-    left:45%;
-    top:0;
+    left: 45%;
+    top: 0;
     /*波形の形状*/
     border: 8px solid rgb(13, 218, 245);
     width: 300px;
     height: 300px;
     border-radius: 50%;
-	opacity:1;
-    animation:1s circleanime forwards;
+    opacity: 1;
+    animation: 1s circleanime forwards;
 }
 
 #gallery-2:hover::before {
     content: '';
     /*絶対配置で波形の位置を決める*/
     position: absolute;
-    left:45%;
-    top:37%;
+    left: 45%;
+    top: 37%;
     /*波形の形状*/
     border: 8px solid rgb(13, 218, 245);
     width: 300px;
     height: 300px;
     border-radius: 50%;
-	opacity:1;
-    animation:1s circleanime forwards;
+    opacity: 1;
+    animation: 1s circleanime forwards;
 }
 
 #gallery-3:hover::before {
     content: '';
     /*絶対配置で波形の位置を決める*/
     position: absolute;
-    left:45%;
+    left: 45%;
     bottom: 30%;
     /*波形の形状*/
     border: 8px solid rgb(13, 218, 245);
     width: 300px;
     height: 300px;
     border-radius: 50%;
-	opacity:1;
-    animation:1s circleanime forwards;
+    opacity: 1;
+    animation: 1s circleanime forwards;
 }
 
 
-.Page-Btn{
+.Page-Btn {
     position: fixed;
     right: 30px;
     bottom: 100px;
@@ -644,13 +895,13 @@
     border-radius: 50%;
     background: #5bc8ac;
     box-shadow: 10px 10px 15px 0px #444447;
-  }
+}
 
 .Page-Btn img {
     margin-top: 50px;
 }
 
-.Page-Btn > a {
+.Page-Btn>a {
     margin-top: 0px;
     padding-top: 0px;
     font-size: 25px;
@@ -658,29 +909,29 @@
     color: white;
     display: block;
 
-    
+
 }
 
-.Page-Btn > a:hover {
+.Page-Btn>a:hover {
     color: yellow;
 }
 
-.Page-Btn > a:hover::before {
+.Page-Btn>a:hover::before {
     content: '';
     /*絶対配置で波形の位置を決める*/
     position: absolute;
-    left:20%;
-    top:0;
+    left: 20%;
+    top: 0;
     /*波形の形状*/
     border: 8px solid rgb(241, 245, 13);
     width: 60px;
     height: 60px;
     border-radius: 50%;
-	opacity:1;
-    animation:1s circleanime forwards;
+    opacity: 1;
+    animation: 1s circleanime forwards;
 }
 
-.Page-Btn > a:active {
+.Page-Btn>a:active {
     box-shadow: none;
     position: relative;
     top: 4px;
@@ -693,7 +944,8 @@ footer {
     background-color: rgb(0, 8, 44);
     text-align: center;
     color: gray;
-    bottom: 0; /*下に固定*/
+    bottom: 0;
+    /*下に固定*/
 }
 
 .footer-message {
@@ -702,7 +954,7 @@ footer {
 
 .footer-logo {
     font-size: 28px;
-    
+
 }
 
 footer ul {
@@ -712,7 +964,7 @@ footer ul {
     margin-left: 43%;
 }
 
-.link > ul {
+.link>ul {
     margin-left: 36%;
 }
 
@@ -722,9 +974,9 @@ footer ul li {
 
 footer a {
     /*波紋の基点とするためrelativeを指定*/
-	position: relative;
+    position: relative;
     /*リンクの形状*/
-	display:inline-block;
+    display: inline-block;
     text-decoration: none;
     outline: none;
 }
@@ -734,20 +986,24 @@ footer a:hover::before {
     content: '';
     /*絶対配置で波形の位置を決める*/
     position: absolute;
-    left:30%;
-    top:0;
+    left: 30%;
+    top: 0;
     /*波形の形状*/
     border: 8px solid rgb(13, 218, 245);
     width: 30px;
     height: 30px;
     border-radius: 50%;
-	opacity:1;
-    animation:1s circleanime forwards;
+    opacity: 1;
+    animation: 1s circleanime forwards;
 }
 
 footer a:active {
     position: relative;
     top: 4px;
+}
+
+.nav-menu-under>ul {
+    margin-left: 37%;
 }
 
 #alert {
@@ -766,27 +1022,47 @@ footer a:active {
 }
 
 /*1.フェードインアニメーションの指定*/
-.scroll {opacity: 0;} /*一瞬表示されるのを防ぐ*/
+.scroll {
+    opacity: 0;
+}
+
+/*一瞬表示されるのを防ぐ*/
 .fadeInDown {
     animation-name: fadeInDown;
     animation-duration: 5s;
     animation-fill-mode: forwards;
 }
+
 @keyframes fadeInDown {
     0% {
-        opacity: 0;         
+        opacity: 0;
     }
+
     100% {
-    opacity: 1;
-    transform: translate(0);
+        opacity: 1;
+        transform: translate(0);
     }
 }
- 
+
 /*2.上下の動きを指定*/
-.updown {transform: translateY(-100px);}
-.downup {transform: translateY(100px);}
- 
+.updown {
+    transform: translateY(-100px);
+}
+
+.downup {
+    transform: translateY(100px);
+}
+
 /*3.左右の動きを指定*/
-.sect02{overflow: hidden;} /*横スクロールバーを隠す*/
-.slide-right {transform: translateX(200px);}
-.slide-left {transform: translateX(-200px);}
+.sect02 {
+    overflow: hidden;
+}
+
+/*横スクロールバーを隠す*/
+.slide-right {
+    transform: translateX(200px);
+}
+
+.slide-left {
+    transform: translateX(-200px);
+}

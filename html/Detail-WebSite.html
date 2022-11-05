@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Detail-Page.css">
+    <title>espock詳細ページ</title>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <style>
+        body {
+            background-image: url("../img/01-fabric-shirt.png");
+        }
+
+        .title-message {
+            position: relative;
+            top: 9vh;
+            left: 13vw;
+        }
+    </style>
+</head>
+
+<body>
+    <!--左上にロゴを固定-->
+    <div class="my-logo">
+        <h1>KAZU</h1>
+        <img src="../img/my-logo.png">
+    </div>
+
+    <!--TOPページに戻るボタンを設置-->
+    <!--左下→右下→右上→左上→左下の順に枠線が伸びて塗りに変化する-->
+    <a href="../index.html" class="prev-btn border">
+        <span>←back</span>
+    </a>
+
+    <!--タイトル-->
+    <div class="title-message">
+        <h2 style="font-size: 1.5rem;">音楽情報総合サイト</h2>
+        <h1 style="font-size: 4.5rem;"">espock</h1>
+        <h2 style=" font-size: 2.1rem;">制作途中</h2>
+    </div>
+
+    <!--メインコンテンツ-->
+    <div class="box">
+        <div class="main mainImg">
+            <img src="../img/website1.png" />
+        </div>
+
+        <!--upsownクラスを付与することで上から下へのフェードインアニメーションを実現-->
+        <ul class="sub subImg scroll updown">
+            <li>
+                <img src="../img/website1.png">
+                <h2>TOPページ</h2>
+            </li>
+            <li>
+                <img src="../img/webSite02.png" />
+                <h2>六角形を使ったグリッドレイアウトにチャレンジしました</h2>
+            </li>
+            <li>
+                <img src="../img/webSite03.png" />
+                <h2>ネオンライト風電光掲示板</h2>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="gaiyou">
+        <!--updown クラスを付与することで上から下へのフェードインを実現-->
+        <p class="scroll updown">制作時間６時間</p>
+        <p class="scroll updown">大好きな邦ロックについてまとめたWebサイトを現在作っています</p>
+        <p class="scroll updown">六角形を用いたグリッドレイアウトにチャレンジしてみたり、<br>
+            ネオンライト風電光掲示板を作ってみたりなど今までやってこなかった新しいことにチャレンジしてみました。</p>
+    </div>
+
+    <p class="copyright">(c) 2021- KAZU</p>
+
+    <!--JavaScriptの読み込み-->
+    <script src="../js/slide.js"></script>
+    <script src="../js/fadeInAnimation.js"></script>
+</body>
+
+</html>

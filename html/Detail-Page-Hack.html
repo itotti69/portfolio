@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Detail-Page.css">
+    <title>ハッカソン詳細ページ</title>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <style>
+        body {
+            background-image: url("../img/01-fabric-shirt.png");
+        }
+
+        .title-message {
+            position: relative;
+            top: 9vh;
+            left: 13vw;
+        }
+    </style>
+</head>
+
+<body>
+    <!--左上にロゴを固定-->
+    <div class="my-logo">
+        <h1>KAZU</h1>
+        <img src="../img/my-logo.png">
+    </div>
+
+    <!--TOPページに戻るボタンを設置-->
+    <!--左下→右下→右上→左上→左下の順に枠線が伸びて塗りに変化する-->
+    <a href="../index.html" class="prev-btn border">
+        <span>←back</span>
+    </a>
+
+    <!--タイトル-->
+    <div class="title-message">
+        <h2 style="font-size: 1.5rem;">翻訳チャットアプリ</h2>
+        <h1 style="font-size: 4.5rem;"">コミュチャ</h1>
+        <h2 style=" font-size: 2.1rem;">Hack Aichi 2022 企業賞受賞</h2>
+    </div>
+
+    <!--メインコンテンツ-->
+    <div class="box">
+        <div class="main mainImg">
+            <img src="../img/hack02.png" />
+        </div>
+
+        <!--upsownクラスを付与することで上から下へのフェードインアニメーションを実現-->
+        <ul class="sub subImg scroll updown">
+            <li>
+                <img src="../img/hack02.png">
+                <h2>最終プレゼン発表資料</h2>
+            </li>
+            <li>
+                <img src="../img/hack04.png" />
+                <h2>ハッカソンのテーマはSDGs</h2>
+            </li>
+            <li>
+                <img src="../img/hack03.png" />
+                <h2>大学のホームページにも掲載されました</h2>
+            </li>
+
+        </ul>
+
+        <ul class="sub subImg scroll updown">
+            <li>
+                <img src="../img/hack05.png">
+                <h2>母国語が違う多人数が集まったグループ</h2>
+            </li>
+            <li>
+                <img src="../img/hack06.png" />
+                <h2>外国人でも優しい日本語が使えるようになる！</h2>
+            </li>
+            <li>
+                <img src="../img/hack07.png" />
+                <h2>役割分担・使用言語</h2>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="gaiyou">
+        <!--updown クラスを付与することで上から下へのフェードインを実現-->
+        <p class="scroll updown">愛知県経営者協会・同協会会員企業が主催する<br>
+            Hack Aichi +2022でCKD株式会社企業賞を受賞しました。</p>
+        <p class="scroll updown">愛知県内の大学対抗で、２週間という短い期間の中でSDGs達成に向けたプロダクト・サービスを提案し、発表するというイベントです。<br>
+            独創性やデザイン力、技術力、チームワークなどの総合力が試されました。</p>
+        <p class="scroll updown">SDGsのテーマの一つである、『働きがいのある職場環境』をどう作っていけばいいのかを３人チームで考え、<br>
+            対面ではなくチャットでコミュニケーションを取る機会が多くなった今の日本で必要な、<br>
+            日本人と外国人、上司と部下とのテキストコミュニケーションを円滑になるようにサポートするアプリ「コミュチャ」を制作しました。 </p>
+        <p class="scroll updown">初めて扱う言語、初めて参加するハッカソン、初めてのアプリ開発、そして他チームよりも少ない人数という<br>
+            多くのハンデを背負いながらも結果を残すことができたのは今後エンジニアとして働く上でのとても大きな自信になりました。</p>
+    </div>
+
+    <div class="hack-video">
+        <video controls width="600" height="600" src="../video/chat_app.mp4"></video>
+    </div>
+
+    <p class="copyright">(c) 2021- KAZU</p>
+
+    <!--JavaScriptの読み込み-->
+    <script src="../js/slide.js"></script>
+    <script src="../js/fadeInAnimation.js"></script>
+</body>
+
+</html>

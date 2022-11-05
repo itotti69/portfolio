@@ -1,54 +1,59 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="css/option.css">
-    <link rel="stylesheet" href="css/style.css">
-    
-    <script src="js/scroll.js" type="module"></script>
-    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script> 
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/option.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/scroll.js" type="module"></script>
+  <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
+
 <body>
-    <!--まずはローディングアニメーションからスタート-->
-    <div id="loading">
+  <!-- 動作が重くなるためローディングアニメーションは削除 -->
+  <!-- まずはローディングアニメーションからスタート -->
+  <!-- <div id="loading">
       <div id="my-logo">
         <img src="img/my-logo.png" alt="" clas="fadeUp">
       </div>
-    </div>
+    </div> -->
 
-    <div id="container">
-      <header class="header-main" id="background-1">
-        <h1>
-            <!--タイトルを押すとサイトのTOPに戻るようにaタグの中にタイトルを書いておく-->
-            <a href="#introduction" class="logo-link">KAZU</a>
-        </h1>
+  <div id="container">
+    <!-- ヘッダー -->
+    <header class="header-main" id="background-1">
+      <h1>
+        <!-- タイトルを押すとサイトのTOPに戻る -->
+        <a href="#introduction" class="logo-link">KAZU</a>
+      </h1>
 
-        <div class="my-logo scroll updown">
-          <img src="img/my-logo.png">
-        </div>
-  
-        <!--あとからここにアイコンを載せる-->
-        <nav class="nav-menu-top" >
-            <ul>
-                <li class="now">
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <!--下３つはリンクをクリックした時に別ページへ遷移する-->
-                    <a href="html/info.html">Info</a>
-                </li>
-                <li>
-                    <a href="html/message.html">Message</a>
-                </li>
-            </ul>
-          </nav>     
-      </header>
+      <div class="my-logo scroll updown">
+        <img src="img/my-logo.png">
+      </div>
+
+      <!-- ナビゲーションメニュー -->
+      <nav class="nav-menu-top">
+        <ul>
+          <li class="now">
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <!-- innformation -->
+            <a href="html/info.html">Info</a>
+          </li>
+          <li>
+            <!-- お問合わせ -->
+            <a href="html/message.html">Message</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <!--ハンバーガーメニュー-->
     <div class="menu-btn" id="js-humbergur">
@@ -60,147 +65,184 @@
     <!--画面最上部に載せる写真とコンテンツ-->
     <section class="top " id="background-1">
       <div class="top-title scroll updown">
-        <h2>Welcome to mypage！</h2>
-        <p>This is my portfolio site.</p>
-      </div> 
-
-      
+        <h2>デザインのできるエンジニアをめざして</h2>
+        <p>Welcome to My Portfolio Site.</p>
+      </div>
     </section>
 
-    <!--この間になんらかのアニメーション-->
-    
+    <!-- 自己紹介 -->
     <section id="introduction" class="scroll updown">
-        <!--ここには自己紹介を書く-->
-        <div class="name">
-            <h1>伊藤和輝</h1>
-            <p>Ito Kazuki</p>
-        </div>
-        
-        <div class="career">
-            <p>所属：愛知工業大学　情報科学部情報科学科　メディア情報専攻<br>
-                活動拠点：愛知県<br>
-                使えるプログラミング言語：JavaScript, Javaなど</p>
-            <p>デザイン制作、動画制作、Webサイト制作などを中⼼に活動をしています / Adobe Photoshopをはじめ、<br>AdobeAfterEffects
-                や AdobeIllustratorを使った作品制作の経験あり / Adobe Premier ProやiMoveを使ったMV制作の経験あり</p>
-        </div>
+      <div class="name">
+        <small style="font-size: 2rem;">Ito Kazuki</small>
+        <h1>伊藤和輝</h1>
+      </div>
+
+      <!-- 経歴 -->
+      <div class="career">
+        <p>所属：愛知工業大学 情報科学部情報科学科 メディア情報専攻 松河ゼミ所属<br>
+          2001年6月2日生まれ
+          活動拠点：愛知県<br>
+          使えるプログラミング言語/フレームワーク: Python/Django, PHP, ReactNative,
+          JavaScript, Java, C言語, HTML&CSS, OpenCV, OpenGL, C#</p>
+        <p>Webサイト制作, Webアプリ開発, モバイルアプリ開発, ゲーム制作, 動画制作などを中⼼に活動をしています。</p>
+        Adobe Photoshopをはじめ、<br>Adobe Illustratorを使った作品制作の経験あり
+        / Adobe PremierProやAdobeAfterEffectsを使ったMV制作の経験もあり</p>
+      </div>
     </section>
 
+    <!-- なりたい将来像 -->
     <section class="vision anim" id="background-2">
-        <!--ここにメッセージを追加する（未来のビジョンなど）-->
-        <h2 class="scroll updown">この先も進化を続けていく社会の中で、その時々にあったWebデザインのあり⽅を追求し、
-             誰にでもわかりやすいWebサイトを制作していきたいと考えています。</h2>
+      <div class="vision-container">
+        <h2 class="scroll updown">この先の変化が激しい時代の中で、<br>その時々にあったコンテンツ・サービスのあり⽅を追求し、<br>
+          もっと使いやすく、もっと楽しんでもらえるような<br>アプリケーションやWebサイトを制作していきます。</h2>
+      </div>
     </section>
 
+    <!-- 特に注力した制作物　コミュチャ　（Hack Aichi2022） -->
+    <section id="hackason">
+      <div id="hackason-title" class="scroll updown">
+        <h1>コミュチャ</h1>
+        <h2>Hack Aichi +2022 企業賞</h2>
+      </div>
 
-    <section id="design">
-        <!--ここにはギャラリーでこれまで作った「デザイン」を載せる-->
-        <div id="design-title" class="scroll slide-left">
-            <h1>Section１</h1>
-            <h2>〜グラフィックデザイン〜</h2>
-        </div>
-        
-        <div class="design-images">
-            <div class="design-content scroll slide-left" id="post1-1"> 
-              <a id="gallery" data-fancybox="gallery01" href="img/kagee.jpg" data-caption="影絵<br>「馬」「コアラ」「イルカ」「ウサギ」">
-                <img src="img/kagee.jpg" alt="design image">
-                <p>影絵・・・「馬」「コアラ」「イルカ」「ウサギ」</p>
-                <a href="html/Detail-Page01.html" class="linkbutton viewmore"><span>View More→</span></a>
-              </a>
+      <!-- Hack Aichi 2022 企業賞受賞作品紹介　-->
+      <div class="hackason-box">
+        <!-- 左からスライドイン -->
+        <div class="hackason-content scroll slide-left" id="post3-1">
+          <div id="hackason-content-message" class="website1">
+            <div class="info-message">
+              <h3>SDGs解決に向けて職場の環境を良くするアプリを開発<br>
+                日本語⇄外国語、敬語⇄常語　自動翻訳チャットアプリ
+              </h3>
             </div>
-            
-            <div class="design-content scroll slide-left" id="post1-2"> 
-              <a id="gallery-2" data-fancybox="gallery01" href="img/logo_tree.jpg" data-caption="「ロゴツリー」">
-                <img src="img/logo_tree.jpg" alt="design image">
-                <p>「ロゴツリー」</p>
-                <a href="html/Detail-Page02.html" class="linkbutton viewmore"><span>View More→</span></a>
-              </a>
+            <div class="info-title">
+              <h2>コミュチャ</h2>
             </div>
 
-            <div class="design-content scroll slide-left" id="post1-3"> 
-              <a id="gallery-3" data-fancybox="gallery01" href="img/JAPAN_poster.jpg" data-caption="ポスターコンペ">
-                <img src="img/JAPAN_poster.jpg" alt="design image">
-                <p>ポスターコンペ</p>
-                <a href="html/Detail-Page03.html" class="linkbutton viewmore"><span>View More→</span></a>
-              </a>
+            <!-- 使用した言語 -->
+            <div class="info-message" style="margin-top: 1.5rem;">
+              <h4>ReactNative, Firebase, TypeScript, Python
+              </h4>
             </div>
-
           </div>
+
+          <!-- gallery04がこのアプリを示す　　画像クリックで浮かび上がる-->
+          <div class="hackason-images">
+            <a id="gallery" data-fancybox="gallery04" href="img/hack01.png" data-caption="Hack Aichi+2022"
+              id="web-gallery">
+              <img src="img/hack01.png" alt="website image">
+            </a>
+          </div>
+
+          <div class="hackason-link">
+            <!-- 詳細ページへ -->
+            <a href="html/Detail-Page-Hack.html" class="linkbutton"><span>View More→</span></a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 制作物　（Webサイト） 　-->
+    <section id="webSite">
+      <div id="webSite-title" class="scroll updown">
+        <h1>Webサイト</h1>
+      </div>
+
+      <div class="webSite-box">
+        <!-- 左からスライドイン -->
+        <div class="webSite-content scroll slide-right" id="post3-1">
+          <div id="webSite-content-message" class="website1">
+            <div class="info-message">
+              <h3>趣味を最大限にアピール　"音楽総合情報サイト"</h3>
+            </div>
+            <div class="info-title">
+              <h2>espock</h2>
+            </div>
+          </div>
+
+          <!-- gallery03がこのwebSiteを示す　　画像クリックで浮かび上がる-->
+          <div class="webSite-images">
+            <a id="gallery" data-fancybox="gallery03" href="img/website1.png" data-caption="espock" id="web-gallery">
+              <img src="img/website1.png" alt="website image">
+            </a>
+          </div>
+
+          <div class="webSite-link">
+            <!-- 詳細ページへ -->
+            <a href="html/Detail-WebSite.html" class="linkbutton"><span>View More→</span></a>
+          </div>
+
+        </div>
+      </div>
     </section>
 
     <section id="movie-creation">
-        <!--ここにはギャラリーでこれまでに作った動画・アニメーション３DCGを載せる-->
-        <div id="movie-creation-title" class="scroll downup">
-          <h1>Section２</h1>
-          <h2>〜動画・アニメーション〜</h2>
+      <!--ここにはギャラリーでこれまでに作った動画・アニメーション３DCGを載せる-->
+      <div id="movie-creation-title" class="scroll downup">
+        <h1>動画・アニメーション</h1>
+      </div>
+
+      <div class="movie-images scroll downup">
+        <div class="movie-content" id="post2-1">
+          <a id="gallery" data-fancybox="gallery02" href="img/movie_0.jpg" data-caption="MV ：「月色ホライズン」">
+            <img src="img/movie_0.jpg" alt="movie image">
+            <p>MV ：「月色ホライズン」</p>
+            <a href="html/Detail-Page04.html" class="linkbutton viewmore"><span>View More→</span></a>
+          </a>
+
+        </div>
+        <div class="movie-content" id="post2-2">
+          <a id="gallery" data-fancybox="gallery02" href="img/anime02.jpg" data-caption="アニメーション　~迷宮~">
+            <img src="img/anime02.jpg" alt="movie image">
+            <p>アニメーション　~迷宮~</p>
+            <a href="html/Detail-Page05.html" class="linkbutton viewmore"><span>View More→</span></a>
+          </a>
         </div>
 
-        <div class="movie-images scroll downup">
-            <div class="movie-content" id="post2-1"> 
-              <a id="gallery" data-fancybox="gallery02" href="img/movie_0.jpg" data-caption="MV ：「月色ホライズン」" >
-                <img src="img/movie_0.jpg" alt="movie image">
-                <p>MV ：「月色ホライズン」</p>
-                <a href="html/Detail-Page04.html" class="linkbutton viewmore"><span>View More→</span></a>
-              </a>
-              
-            </div>
-            <div class="movie-content" id="post2-2"> 
-              <a id="gallery" data-fancybox="gallery02" href="img/anime02.jpg" data-caption="アニメーション　~迷宮~">
-                <img src="img/anime02.jpg" alt="movie image">
-                <p>アニメーション　~迷宮~</p>
-                <a href="html/Detail-Page05.html" class="linkbutton viewmore"><span>View More→</span></a>
-              </a>
-            </div>
+        <div class="movie-content" id="post2-3">
+          <a id="gallery" data-fancybox="gallery02" href="img/daibutsu.jpg" data-caption="自己紹介Movie">
+            <img src="img/daibutsu.jpg" alt="movie image">
+            <p>自己紹介Movie</p>
+            <a href="html/Detail-Page06.html" class="linkbutton viewmore"><span>View More→</span></a>
+          </a>
+        </div>
 
-            <div class="movie-content" id="post2-3"> 
-              <a id="gallery" data-fancybox="gallery02" href="img/daibutsu.jpg" data-caption="自己紹介Movie" >
-                <img src="img/daibutsu.jpg" alt="movie image">
-                <p>自己紹介Movie</p>
-                <a href="html/Detail-Page06.html" class="linkbutton viewmore"><span>View More→</span></a>
-              </a>
-            </div>
-
-          </div>
+      </div>
     </section>
 
-    <section id="website-design">
-        <!--ここにはこれまでに作ったWebサイトのデザインを載せる-->
-        <div id="website-design-title" class="scroll updown">
-          <h1>Section３</h1>
-          <h2>〜Webサイト〜</h2>
+    <section id="design">
+      <!--ここにはギャラリーでこれまで作った「デザイン」を載せる-->
+      <div id="design-title" class="scroll slide-left">
+        <h1>グラフィックデザイン</h1>
+      </div>
+
+      <div class="design-images">
+        <div class="design-content scroll slide-left" id="post1-1">
+          <a id="gallery" data-fancybox="gallery01" href="img/kagee.jpg" data-caption="影絵<br>「馬」「コアラ」「イルカ」「ウサギ」">
+            <img src="img/kagee.jpg" alt="design image">
+            <p>影絵・・・「馬」「コアラ」「イルカ」「ウサギ」</p>
+            <a href="html/Detail-Page01.html" class="linkbutton viewmore"><span>View More→</span></a>
+          </a>
         </div>
 
-        <div class="website-images">
-            <div class="web-content scroll slide-left" id="post3-1"> 
-              <div id="web-content-message" class="website1">
-                <p>BAKE</p>
-                <a href="html/Detail-Page07.html" class="linkbutton" id="viewmore1"><span>View More→</span></a>
-              </div>
-              <a id="gallery" data-fancybox="gallery03" href="img/BAKE01.png" data-caption="BAKE" id="web-gallery">
-                <img src="img/BAKE01.png" alt="website image">
-              </a>
-            </div>
+        <div class="design-content scroll slide-left" id="post1-2">
+          <a id="gallery-2" data-fancybox="gallery01" href="img/logo_tree.jpg" data-caption="「ロゴツリー」">
+            <img src="img/logo_tree.jpg" alt="design image">
+            <p>「ロゴツリー」</p>
+            <a href="html/Detail-Page02.html" class="linkbutton viewmore"><span>View More→</span></a>
+          </a>
+        </div>
 
-            <div class="web-content scroll slide-right" id="post3-2"> 
-              <a id="gallery" data-fancybox="gallery03" href="img/Sample1.jpg" data-caption="株式会社KUREHA">
-                <img src="img/Sample1.jpg" alt="website image">
-              </a>
-              <div id="web-content-message" class="website2">
-                <p>株式会社KUREHA</p>
-                <a href="html/Detail-Page08.html" class="linkbutton" id="viewmore2"><span>View More→</span></a>
-              </div>
-            </div>
+        <div class="design-content scroll slide-left" id="post1-3">
+          <a id="gallery-3" data-fancybox="gallery01" href="img/JAPAN_poster.jpg" data-caption="ポスターコンペ">
+            <img src="img/JAPAN_poster.jpg" alt="design image">
+            <p>ポスターコンペ</p>
+            <a href="html/Detail-Page03.html" class="linkbutton viewmore"><span>View More→</span></a>
+          </a>
+        </div>
 
-            <div class="web-content scroll slide-left" id="post3-3"> 
-              <div id="web-content-message" class="website3">
-                <p>INCUBIC</p>
-                <a href="html/Detail-Page09.html" class="linkbutton" id="viewmore3"><span>View More→</span></a>
-              </div>
-              <a id="gallery" data-fancybox="gallery03" href="img/Sample2.jpg" data-caption="INCUBIC">
-                <img src="img/Sample2.jpg" alt="website image">
-              </a>
-            </div>
-
-          </div>
+      </div>
     </section>
 
     <div class="Page-Btn">
@@ -212,44 +254,45 @@
       <div class="linkTo">
         <nav class="footer-message">
           <ul>
-              <li class="footer-logo">
-                <a href="html/info.html">Info</a>
-              </li>
-              <li class="footer-logo">
-                <a href="html/message.html">Message</a>
-              </li>
+            <li class="footer-logo">
+              <a href="/">Home</a>
+            </li>
+            <li class="footer-logo">
+              <a href="html/info.html">Info</a>
+            </li>
+            <li class="footer-logo">
+              <a href="html/message.html">Message</a>
+            </li>
           </ul>
         </nav>
       </div>
-      
+
       <nav class="nav-menu-under">
-        <ul>
+        <ul>
           <li>
-              <!--下3つはTOPページの指定の記事にジャンプする-->
-              <a href="#introduction">自己紹介</a>
+            <!--下3つはTOPページの指定の記事にジャンプする-->
+            <a href="#introduction">自己紹介</a>
           </li>
           <li>
-              <a href="#design">デザイン</a>
+            <a href="#design">デザイン</a>
           </li>
           <li>
-              <a href="#movie-creation">動画・アニメーション・３DCG制作</a>
+            <a href="#movie-creation">動画・アニメーション・３DCG制作</a>
           </li>
           <li>
-              <a href="#website-design">Webサイト制作</a>
+            <a href="#website-design">Webサイト制作</a>
           </li>
         </ul>
       </nav>
-
-      <p id="alert">※このサイトはMacパソコンの全画面表示でGoogleChromeでの表示をメインに作られています。<br>
-      画面幅を収縮するとレイアウトが崩れる場合もありますのでご了承ください。</p>
       <p class="copyright">(c) 2021- KAZU</p>
     </footer>
-    </div>
-    
-    <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/vue-scrollto"></script>
-    <script src="//unpkg.com/scrollreveal"></script>
-    <script src="js/loading.js"></script>
-    <script src="js/fadeInAnimation.js"></script>
+  </div>
+
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/vue-scrollto"></script>
+  <script src="//unpkg.com/scrollreveal"></script>
+  <script src="js/loading.js"></script>
+  <script src="js/fadeInAnimation.js"></script>
 </body>
+
 </html>

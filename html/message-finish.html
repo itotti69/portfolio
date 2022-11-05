@@ -6,135 +6,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>お問い合わせ送信完了ページ（仮）</title>
 
+    <!--CSSスタイル-->
     <style>
         body {
-           text-align: center;
-           background-image: url("../img/05-white-brick.png");
+            text-align: center;
+            background-image: url("../img/05-white-brick.png");
         }
 
         a {
-    text-decoration: none;
-    color: black;
-    box-shadow: 10px 10px 15px 0px #444447;
-}
+            text-decoration: none;
+            color: black;
+            box-shadow: 10px 10px 15px 0px #444447;
+        }
 
-/*ボタンをクリックしたときに沈むようにする処理*/
-a:active {
-    box-shadow: none;
-    position: relative;
-    top: 3px;
-}
+        /*ボタンをクリックしたときに沈むようにする処理*/
+        a:active {
+            box-shadow: none;
+            position: relative;
+            top: 3px;
+        }
 
-/*TOPへ戻るボタン*/
-.prev-btn{
-    position: relative;
-    display: inline-block;
-    color: #333;
-    top: 10vh;
-    left: 1%;
-    margin: 40px 50px;
-    padding: 10px 40px;
-    background-color: rgb(233, 233, 233);
-    text-decoration: none;
-    outline: none;
-    /*アニメーションの指定*/
-    transition: all .4s;
-    transition-delay: .8s; /*0.8秒遅れてアニメーションスタート*/
-}
+        /*TOPへ戻るボタン*/
+        .prev-btn{
+            position: relative;
+            display: inline-block;
+            color: #333;
+            top: 10vh;
+            left: 1%;
+            margin: 40px 50px;
+            padding: 10px 40px;
+            background-color: rgb(233, 233, 233);
+            text-decoration: none;
+            outline: none;
+            /*アニメーションの指定*/
+            transition: all .4s;
+            transition-delay: .8s; /*0.8秒遅れてアニメーションスタート*/
+        }   
 
-/*hoverした際の、ボタンの背景とテキスト色の変更*/
-.prev-btn:hover{
-	background:rgb(32, 31, 31);
-	color: white;
-}
+        /*hoverした際の、ボタンの背景とテキスト色の変更*/
+        .prev-btn:hover{
+            background:rgb(32, 31, 31);
+            color: white;
+        }
 
-/*線のdisplay設定*/
-.prev-btn span{
-    display: block;
-}
+        /*線のdisplay設定*/
+        .prev-btn span{
+            display: block;
+        }
 
-/*縦線の設定*/
-.prev-btn span::before,
-.prev-btn span::after{
-    content:"";
-    /*絶対配置で線の位置を決める*/   
-    position: absolute;
-    /*線の形状*/
-    width:1px;
-    height:0;
-    background: #333;
-    /*アニメーションの指定*/
-    transition: all 0.2s linear;
-}
+        /*縦線の設定*/
+        .prev-btn span::before,
+        .prev-btn span::after{
+            content:"";
+            /*絶対配置で線の位置を決める*/   
+            position: absolute;
+            /*線の形状*/
+            width:1px;
+            height:0;
+            background: #333;
+            /*アニメーションの指定*/
+            transition: all 0.2s linear;
+        }
 
-/*横線の設定*/
-.prev-btn::before,
-.prev-btn::after{
-    content:"";
-    /*絶対配置で線の位置を固定*/   
-    position: absolute;
-    /*線の形状*/   
-    width: 0;
-    height: 1px;
-    background: #333;
-    /*transitionでアニメーションの詳細をs指定*/
-    transition: all 0.2s linear;
-}
+        /*横線の設定*/
+        .prev-btn::before,
+        .prev-btn::after{
+            content:"";
+            /*絶対配置で線の位置を固定*/   
+            position: absolute;
+            /*線の形状*/   
+            width: 0;
+            height: 1px;
+            background: #333;
+            /*transitionでアニメーションの詳細をs指定*/
+            transition: all 0.2s linear;
+        }
 
-/*hoverした際、線が縦に100%伸びる*/
-.prev-btn:hover span::before,
-.prev-btn:hover span::after{
-    height: 100%;
-}
+        /*hoverした際、線が縦に100%伸びる*/
+        .prev-btn:hover span::before,
+        .prev-btn:hover span::after{
+            height: 100%;
+        }
 
-/*hoverした際、線が横に100%伸びる*/
-.prev-btn:hover::before,
-.prev-btn:hover::after{
-    width: 100%;
-}
+        /*hoverした際、線が横に100%伸びる*/
+        .prev-btn:hover::before,
+        .prev-btn:hover::after{
+            width: 100%;
+        }
 
-/*左下から右下へ伸びる横線*/
-.border::after{
-    left: 0;
-    bottom: 0;
-}
+        /*左下から右下へ伸びる横線*/
+        .border::after{
+            left: 0;
+            bottom: 0;
+        }
 
-/*右下から上へ伸びる縦線*/
-.border span::after{
-    right: 0;
-    bottom: 0;
-    transition-delay: 0.1s;
-}
+        /*右下から上へ伸びる縦線*/
+        .border span::after{
+            right: 0;
+            bottom: 0;
+            transition-delay: 0.1s;
+        }
 
-/*右上から左上へ伸びる横線*/
-.border::before{
-    right: 0;
-    top: 0;
-    transition-delay: 0.4s;
-}
+        /*右上から左上へ伸びる横線*/
+        .border::before{
+            right: 0;
+            top: 0;
+            transition-delay: 0.4s;
+        }
 
-/*左上から左下へ伸びる横線*/
-.border span::before{
-    left: 0;
-    top: 0;
-    transition-delay: 0.6s;
-}
+        /*左上から左下へ伸びる横線*/
+        .border span::before{
+            left: 0;
+            top: 0;
+            transition-delay: 0.6s;
+        }
     </style>
 </head>
+
 <body>
     <!--左上にロゴを固定-->
     <div class="my-logo">
         <h1>KAZU</h1>
+        <!--ロゴ-->
         <img src="../img/my-logo.png">
     </div>
 
     <h1>ありがとうございます。メッセージの受け取りが完了しました。</h1>
     
-    <!--TOPページに戻るボタンを設置-->
     <!--左下→右下→右上→左上→左下の順に枠線が伸びて塗りに変化する-->
     <a href="../index.html" class="prev-btn border">
+        <!--TOPページに戻るボタンを設置-->
         <span>←back</span>
     </a>
-
 </body>
+
 </html>
